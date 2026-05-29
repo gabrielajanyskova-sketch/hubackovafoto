@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikola Hubáčková | Fotografka — Olomoucký kraj</title>
+<meta name="description" content="Jsem Nikola, fotografka z Olomouckého kraje. Fotím přirozeně, uvolněně a bez stresu. Svatby, rodinné focení, těhotenské, zvířata. Výsledné snímky dostanete rychle a bez omezení počtu.">
+<meta property="og:title" content="Nikola Hubáčková | Fotografka — Olomoucký kraj">
+<meta property="og:description" content="Fotím přirozeně, uvolněně a bez stresu. Svatby, rodinné focení, těhotenské, zvířata — Olomoucký kraj.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hubackovafoto.cz/">
+<meta property="og:locale" content="cs_CZ">
+<link rel="canonical" href="https://hubackovafoto.cz/" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Nikola Hubáčková — Fotografka",
+  "description": "Fotografka z Olomouckého kraje. Svatby, rodinné focení, těhotenské, zvířata.",
+  "url": "https://hubackovafoto.cz",
+  "telephone": "+420739486263",
+  "email": "nikola@hubackovafoto.cz",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Unčovice 69",
+    "addressLocality": "Litovel",
+    "postalCode": "784 01",
+    "addressCountry": "CZ"
+  },
+  "sameAs": ["https://www.instagram.com/hubackova.photo/"],
+  "serviceType": "Fotografické služby"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap"></noscript>
+
+<style>
+  :root {
+    --cream: #faf8f4;
+    --warm: #f2ede4;
+    --sand: #e8ddd0;
+    --stone: #c4b8a8;
+    --forest: #4a5e4a;
+    --forest-light: #6b8a6b;
+    --dark: #2a2018;
+    --text: #3a2e22;
+    --text-dim: #8a7a6a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100; padding: 24px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    transition: all 0.4s;
+  }
+
+  nav.scrolled {
+    background: rgba(250,248,244,0.96);
+    backdrop-filter: blur(12px);
+    padding: 16px 60px;
+    border-bottom: 1px solid rgba(196,184,168,0.25);
+    box-shadow: 0 2px 20px rgba(42,32,24,0.06);
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; flex-shrink: 0; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--dark); letter-spacing: 0.3px; }
+  .logo-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--forest); font-weight: 400; }
+
+  .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+  .nav-links a { color: var(--text-dim); text-decoration: none; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; padding: 6px 12px; border-radius: 100px; }
+  .nav-links a:hover { color: var(--forest); }
+  .nav-links a.active { color: var(--forest); background: rgba(74,94,74,0.08); }
+
+  .nav-ig a { display: flex; align-items: center; gap: 6px; color: var(--text-dim); text-decoration: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; padding: 6px 12px; }
+  .nav-ig a:hover { color: var(--forest); }
+  .nav-ig svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; }
+
+  .hero-left { display: flex; flex-direction: column; justify-content: flex-end; padding: 120px 60px 80px; position: relative; z-index: 2; }
+
+  .hero-right { position: relative; overflow: hidden; }
+  .hero-right img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) brightness(0.97); transition: transform 8s ease; }
+  .hero-right:hover img { transform: scale(1.03); }
+  .hero-right::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 120px; background: linear-gradient(90deg, var(--cream), transparent); z-index: 1; }
+
+  .hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 30px; }
+  .eyebrow-line { width: 40px; height: 1px; background: var(--forest); }
+  .eyebrow-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--forest); font-weight: 400; }
+
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 6vw, 88px); font-weight: 300; line-height: 1.05; letter-spacing: -1px; color: var(--dark); margin-bottom: 25px; }
+  .hero h1 em { font-style: italic; color: var(--forest); }
+
+  .hero-sub { font-size: 17px; color: var(--text-dim); max-width: 400px; line-height: 1.8; margin-bottom: 45px; font-weight: 300; }
+
+  .btn-primary { display: inline-flex; align-items: center; gap: 12px; background: var(--forest); color: white; padding: 16px 36px; text-decoration: none; font-size: 13px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; transition: all 0.4s; border: none; cursor: pointer; font-family: 'Jost', sans-serif; }
+  .btn-primary:hover { background: var(--dark); gap: 18px; }
+  .btn-primary svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; }
+
+  .hero-scroll { position: absolute; bottom: 40px; left: 60px; display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--stone); }
+  .hero-scroll::before { content: ''; width: 1px; height: 40px; background: var(--stone); animation: scroll-pulse 2s ease-in-out infinite; }
+
+  @keyframes scroll-pulse { 0%, 100% { opacity: 0.3; transform: scaleY(0.6); } 50% { opacity: 1; transform: scaleY(1); } }
+
+  /* MARQUEE */
+  .marquee-section { background: var(--forest); padding: 16px 0; overflow: hidden; }
+  .marquee-track { display: flex; gap: 50px; animation: marquee 30s linear infinite; width: max-content; }
+  .marquee-item { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: rgba(255,255,255,0.65); white-space: nowrap; display: flex; align-items: center; gap: 20px; }
+  .marquee-item::after { content: '✦'; font-size: 7px; color: rgba(255,255,255,0.35); font-style: normal; }
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  /* LAYOUT */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }
+  .section-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--forest); margin-bottom: 16px; font-weight: 400; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4.5vw, 58px); font-weight: 300; line-height: 1.1; letter-spacing: -0.5px; color: var(--dark); margin-bottom: 50px; }
+  .section-title em { font-style: italic; color: var(--forest); }
+
+  /* ABOUT */
+  .about-section { padding: 130px 0; display: grid; grid-template-columns: 5fr 6fr; gap: 80px; align-items: center; }
+
+  .about-visual { position: relative; height: 520px; }
+  .about-img-main { position: absolute; top: 0; left: 0; width: 85%; height: 100%; object-fit: cover; object-position: center top; filter: saturate(0.8) brightness(0.98); }
+  .about-tag-float { position: absolute; top: 30px; right: -15px; background: var(--forest); color: white; padding: 12px 20px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; writing-mode: vertical-rl; transform: rotate(180deg); }
+
+  .about-text p { font-size: 17px; color: var(--text-dim); line-height: 1.9; font-weight: 300; margin-bottom: 18px; }
+  .about-text p strong { color: var(--text); font-weight: 400; }
+
+  .about-list { list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 10px; }
+  .about-list li { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); }
+  .about-list li::before { content: ''; width: 20px; height: 1px; background: var(--forest); flex-shrink: 0; }
+
+  /* SLIDESHOW GALERIE */
+  .slideshow-section { padding: 100px 0; background: var(--warm); overflow: hidden; }
+
+  .slideshow-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 50px; }
+
+  .slideshow-wrap { position: relative; }
+
+  .slideshow-track-outer { overflow: hidden; border-radius: 0; }
+
+  .slideshow-track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+
+  .slide {
+    flex-shrink: 0;
+    width: calc(33.333% - 11px);
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .slide img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.78);
+    transition: transform 0.6s ease, filter 0.4s ease;
+  }
+
+  .slide:hover img { transform: scale(1.05); filter: saturate(1); }
+
+  .slide-label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(42,32,24,0.7), transparent);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .slide:hover .slide-label { opacity: 1; }
+
+  .slideshow-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+  }
+
+  .slide-btn {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--sand);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s;
+    color: var(--text-dim);
+  }
+
+  .slide-btn:hover { background: var(--forest); border-color: var(--forest); color: white; }
+
+  .slide-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  .slide-dots { display: flex; gap: 8px; }
+
+  .slide-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--sand);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+  }
+
+  .slide-dot.active { background: var(--forest); width: 24px; border-radius: 3px; }
+
+  /* LIGHTBOX */
+  .lightbox {
+    position: fixed; inset: 0;
+    background: rgba(42,32,24,0.95);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+
+  .lightbox.open { display: flex; }
+
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    filter: saturate(0.9);
+  }
+
+  .lightbox-close {
+    position: absolute; top: 25px; right: 30px;
+    background: none; border: none; color: rgba(255,255,255,0.6);
+    font-size: 28px; cursor: pointer; transition: color 0.3s;
+    font-weight: 300;
+  }
+
+  .lightbox-close:hover { color: white; }
+
+  .lightbox-prev, .lightbox-next {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.7); width: 50px; height: 50px;
+    border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s; font-size: 20px;
+  }
+
+  .lightbox-prev { left: 25px; }
+  .lightbox-next { right: 25px; }
+  .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.15); color: white; }
+
+  /* SERVICES */
+  .services-section { padding: 100px 0; }
+
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+
+  .service-card { position: relative; overflow: hidden; aspect-ratio: 3/4; }
+  .service-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.16,1,0.3,1); filter: saturate(0.75) brightness(0.88); }
+  .service-card:hover img { transform: scale(1.07); }
+  .service-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(42,32,24,0.88) 0%, rgba(42,32,24,0.15) 55%, transparent 100%); transition: background 0.4s; }
+  .service-card:hover .service-overlay { background: linear-gradient(to top, rgba(74,94,74,0.88) 0%, rgba(74,94,74,0.25) 60%, transparent 100%); }
+  .service-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; z-index: 2; }
+  .service-num { font-family: 'Cormorant Garamond', serif; font-size: 12px; color: rgba(255,255,255,0.45); letter-spacing: 2px; margin-bottom: 8px; }
+  .service-name { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 300; color: white; line-height: 1.1; }
+  .service-sub { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 6px; font-weight: 300; }
+
+  /* CENÍK */
+  .pricing-section { padding: 120px 0; background: var(--warm); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 60px;
+  }
+
+  .price-card {
+    background: white;
+    border: 1px solid var(--sand);
+    padding: 45px 35px;
+    position: relative;
+    transition: all 0.4s;
+  }
+
+  .price-card:hover {
+    border-color: var(--forest);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(42,32,24,0.08);
+  }
+
+  .price-card.featured {
+    background: var(--forest);
+    border-color: var(--forest);
+  }
+
+  .price-tag-badge {
+    position: absolute;
+    top: -14px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark);
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    white-space: nowrap;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .price-card-tag {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+
+  .price-card.featured .price-card-tag { color: rgba(255,255,255,0.6); }
+
+  .price-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .price-card.featured h3 { color: white; }
+
+  .price-card > p {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-bottom: 25px;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .price-card.featured > p { color: rgba(255,255,255,0.6); }
+
+  .price-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+  }
+
+  .price-amount span { font-size: 18px; color: var(--text-dim); letter-spacing: 0; }
+  .price-card.featured .price-amount { color: white; }
+  .price-card.featured .price-amount span { color: rgba(255,255,255,0.5); }
+
+  .price-divider { height: 1px; background: var(--sand); margin-bottom: 25px; }
+  .price-card.featured .price-divider { background: rgba(255,255,255,0.15); }
+
+  .price-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .price-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-dim); font-weight: 300; }
+  .price-card.featured .price-features li { color: rgba(255,255,255,0.7); }
+
+  .price-features li svg { width: 14px; height: 14px; stroke: var(--forest); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+  .price-card.featured .price-features li svg { stroke: rgba(255,255,255,0.7); }
+
+  .pricing-note { text-align: center; font-size: 14px; color: var(--text-dim); margin-top: 30px; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 18px; }
+
+  /* PROCESS */
+  .process-section { padding: 100px 0; background: var(--dark); position: relative; overflow: hidden; }
+  .process-section::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; border-radius: 50%; background: rgba(74,94,74,0.07); pointer-events: none; }
+  .process-section .section-tag { color: rgba(255,255,255,0.35); }
+  .process-section .section-title { color: #faf8f4; }
+
+  .process-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 60px;
+  }
+
+  .process-icon-item {
+    text-align: center;
+    padding: 0 40px;
+    position: relative;
+  }
+
+  .process-icon-item + .process-icon-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 28px;
+    width: 1px; height: 40%;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .process-icon-circle {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(107,138,107,0.4);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.4s;
+  }
+
+  .process-icon-item:hover .process-icon-circle {
+    border-color: var(--forest-light);
+    background: rgba(74,94,74,0.15);
+  }
+
+  .process-icon-circle svg { width: 22px; height: 22px; stroke: var(--forest-light); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  .process-icon-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: #faf8f4; margin-bottom: 14px; }
+  .process-icon-item p { font-size: 15px; color: rgba(250,248,244,0.42); line-height: 1.75; font-weight: 300; }
+
+  /* CONTACT */
+  .contact-section { padding: 130px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+
+  .contact-img { position: relative; height: 600px; overflow: hidden; }
+  .contact-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.75); transition: transform 6s ease; }
+  .contact-img:hover img { transform: scale(1.04); }
+  .contact-img::after { content: ''; position: absolute; inset: 0; border: 1px solid rgba(196,184,168,0.25); pointer-events: none; }
+
+  .contact-form-wrap h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 52px); font-weight: 300; color: var(--dark); line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.5px; }
+  .contact-form-wrap h2 em { font-style: italic; color: var(--forest); }
+  .contact-form-wrap > p { font-size: 16px; color: var(--text-dim); margin-bottom: 40px; font-weight: 300; line-height: 1.7; }
+
+  .form-group { margin-bottom: 22px; }
+  .form-group input, .form-group textarea { width: 100%; padding: 15px 0; background: transparent; border: none; border-bottom: 1px solid var(--sand); color: var(--text); font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 300; transition: border-color 0.3s; outline: none; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: var(--stone); font-size: 14px; letter-spacing: 0.5px; }
+  .form-group input:focus, .form-group textarea:focus { border-bottom-color: var(--forest); }
+  .form-group textarea { resize: none; height: 100px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  .contact-info { margin-top: 35px; padding-top: 30px; border-top: 1px solid var(--sand); display: flex; flex-direction: column; gap: 12px; }
+  .contact-info-item { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); text-decoration: none; transition: color 0.3s; }
+  .contact-info-item:hover { color: var(--forest); }
+  .contact-info-item svg { width: 15px; height: 15px; stroke: var(--forest); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+  /* FOOTER */
+  footer { background: var(--dark); padding: 50px 0 28px; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 20px; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #faf8f4; text-decoration: none; }
+  .footer-logo em { font-style: italic; color: var(--forest-light); }
+  .footer-links { display: flex; gap: 30px; list-style: none; }
+  .footer-links a { color: rgba(250,248,244,0.3); text-decoration: none; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--forest-light); }
+  .footer-bottom { border-top: 1px solid rgba(250,248,244,0.05); padding-top: 22px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(250,248,244,0.18); flex-wrap: wrap; gap: 10px; }
+  .footer-bottom a { color: rgba(107,138,107,0.5); text-decoration: none; }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.9s ease, transform 0.9s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.9s ease, transform 0.9s ease; }
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 18px 24px; }
+    nav.scrolled { padding: 14px 24px; }
+    .nav-links, .nav-ig { display: none; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 110px 24px 60px; }
+    .hero-right { height: 65vw; }
+    .hero-right::after { display: none; }
+    .about-section { grid-template-columns: 1fr; padding: 80px 0; gap: 50px; }
+    .about-visual { height: 320px; }
+    .about-tag-float { display: none; }
+    .slide { width: calc(100% - 0px); }
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { aspect-ratio: 4/3; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .process-icons-grid { grid-template-columns: 1fr; gap: 40px; }
+    .process-icon-item + .process-icon-item::before { display: none; }
+    .contact-section { grid-template-columns: 1fr; padding: 80px 0; }
+    .contact-img { height: 280px; }
+    .container { padding: 0 24px; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-scroll { display: none; }
+    .slideshow-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="19" cy="19" r="17" stroke="#4a5e4a" stroke-width="1.2" fill="none"/>
+      <circle cx="19" cy="19" r="11" stroke="#4a5e4a" stroke-width="1" fill="none" opacity="0.5"/>
+      <g transform="translate(19,19)">
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(0)"/>
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(60)"/>
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(120)"/>
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(180)"/>
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(240)"/>
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(300)"/>
+        <circle cx="0" cy="0" r="2.5" fill="#faf8f4" stroke="#4a5e4a" stroke-width="0.8"/>
+      </g>
+    </svg>
+    <div class="logo-text">
+      <span class="logo-name">Nikola Hubáčková</span>
+      <span class="logo-title">Fotografka</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#o-mne" data-section="o-mne">O mně</a></li>
+    <li><a href="#galerie" data-section="galerie">Galerie</a></li>
+    <li><a href="#sluzby" data-section="sluzby">Služby</a></li>
+    <li><a href="#cenik" data-section="cenik">Ceník</a></li>
+    <li><a href="#kontakt" data-section="kontakt">Kontakt</a></li>
+  </ul>
+
+  <div class="nav-ig">
+    <a href="https://www.instagram.com/hubackova.photo/" target="_blank">
+      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+      Instagram
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Fotografka · Olomoucký kraj</span>
+    </div>
+    <h1>Vytvářejme<br>si vzpomínky<br>na <em>celý život</em></h1>
+    <p class="hero-sub">Fotím přirozeně, uvolněně a bez stresu. Nejkrásnější záběry vznikají, když jste sami sebou.</p>
+    <a href="#kontakt" class="btn-primary">
+      Chci se objednat
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+  <div class="hero-right">
+    <img src="https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce.jpg" alt="Fotografka Nikola Hubáčková při focení" loading="eager">
+  </div>
+  <div class="hero-scroll">Scrollovat</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">Svatby</span>
+    <span class="marquee-item">Rodinné focení</span>
+    <span class="marquee-item">Těhotenské</span>
+    <span class="marquee-item">Zvířata</span>
+    <span class="marquee-item">Vánoční portréty</span>
+    <span class="marquee-item">Ateliér</span>
+    <span class="marquee-item">Olomoucký kraj</span>
+    <span class="marquee-item">Přirozené momentky</span>
+    <span class="marquee-item">Svatby</span>
+    <span class="marquee-item">Rodinné focení</span>
+    <span class="marquee-item">Těhotenské</span>
+    <span class="marquee-item">Zvířata</span>
+    <span class="marquee-item">Vánoční portréty</span>
+    <span class="marquee-item">Ateliér</span>
+    <span class="marquee-item">Olomoucký kraj</span>
+    <span class="marquee-item">Přirozené momentky</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- O MNĚ -->
+  <section class="about-section" id="o-mne">
+    <div class="about-visual reveal-left">
+      <img class="about-img-main"
+        src="https://hubackovafoto.cz/wp-content/uploads/2025/10/KingOfSurf-2den-101.jpg"
+        alt="Nikola Hubáčková fotografka při focení">
+      <div class="about-tag-float">Fotografka</div>
+    </div>
+    <div class="about-text reveal">
+      <div class="section-tag">O mně</div>
+      <h2 class="section-title" style="margin-bottom:25px;">Jsem Nikča,<br><em>fotografka emocí.</em></h2>
+      <p>Jsem 25letá fotografka z Olomouckého kraje, která miluje zachycování přirozených momentů. Využívám profesionální fotoaparát <strong>Nikon Z5 II</strong>.</p>
+      <p>Zaměřuji se na svatby, rodiny, těhotenské focení, zvířata i nové výzvy. Focení se mnou je <strong>pohodové a přirozené</strong> — nemusíte se bát strnulého pózování.</p>
+      <p>Výsledné snímky dostanete rychle a <strong>bez omezení počtu</strong>.</p>
+      <ul class="about-list">
+        <li>Venkovní i ateliérové focení</li>
+        <li>Olomoucký kraj a okolí</li>
+        <li>Rychlé dodání upravených snímků</li>
+        <li>Přirozený a uvolněný přístup</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<!-- SLIDESHOW GALERIE -->
+<section class="slideshow-section" id="galerie">
+  <div class="container">
+    <div class="slideshow-header reveal">
+      <div>
+        <div class="section-tag">Galerie</div>
+        <div class="section-title" style="margin-bottom:0;">Pohled do<br><em>mé práce</em></div>
+      </div>
+      <a href="#kontakt" class="btn-primary">
+        Chci nafotit
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="slideshow-wrap">
+      <div class="slideshow-track-outer">
+        <div class="slideshow-track" id="slideshow-track">
+          <div class="slide" onclick="openLightbox(0)">
+            <img src="https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce2.jpg" alt="Focení — momentky" loading="lazy">
+            <div class="slide-label">Přirozené momentky</div>
+          </div>
+          <div class="slide" onclick="openLightbox(1)">
+            <img src="https://hubackovafoto.cz/wp-content/uploads/2025/09/DSC054841.jpg" alt="Přirozené focení" loading="lazy">
+            <div class="slide-label">Rodinné focení</div>
+          </div>
+          <div class="slide" onclick="openLightbox(2)">
+            <img src="https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce_svatby.jpg" alt="Svatební fotografie" loading="lazy">
+            <div class="slide-label">Svatby</div>
+          </div>
+          <div class="slide" onclick="openLightbox(3)">
+            <img src="https://hubackovafoto.cz/wp-content/uploads/2025/11/DSC00932-1.jpg" alt="Rodinné focení" loading="lazy">
+            <div class="slide-label">Rodina & příroda</div>
+          </div>
+          <div class="slide" onclick="openLightbox(4)">
+            <img src="https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce_vanoce.jpg" alt="Vánoční focení" loading="lazy">
+            <div class="slide-label">Vánoční portréty</div>
+          </div>
+          <div class="slide" onclick="openLightbox(5)">
+            <img src="https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce.jpg" alt="Portfolio fotografka" loading="lazy">
+            <div class="slide-label">V akci</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slideshow-controls">
+        <button class="slide-btn" id="slide-prev">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="slide-dots" id="slide-dots"></div>
+        <button class="slide-btn" id="slide-next">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-prev" onclick="lightboxNav(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-next" onclick="lightboxNav(1)">›</button>
+</div>
+
+<!-- SLUŽBY -->
+<section class="services-section" id="sluzby">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:50px;">
+      <div class="section-tag">Co fotografuji</div>
+      <div class="section-title">Nabídka<br><em>služeb</em></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <img src="https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce_svatby.jpg" alt="Svatební fotograf Olomoucký kraj">
+        <div class="service-overlay"></div>
+        <div class="service-info">
+          <div class="service-num">01</div>
+          <div class="service-name">Svatby</div>
+          <div class="service-sub">Nejkrásnější den vašeho života</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <img src="https://hubackovafoto.cz/wp-content/uploads/2025/11/DSC00932-1.jpg" alt="Rodinné focení těhotenské zvířata">
+        <div class="service-overlay"></div>
+        <div class="service-info">
+          <div class="service-num">02</div>
+          <div class="service-name">Rodina<br>& Těhotenské</div>
+          <div class="service-sub">Děti, mazlíčci, budoucí maminky</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <img src="https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce_vanoce.jpg" alt="Vánoční a tematické focení ateliér">
+        <div class="service-overlay"></div>
+        <div class="service-info">
+          <div class="service-num">03</div>
+          <div class="service-name">Portréty<br>& Ateliér</div>
+          <div class="service-sub">Vánoce, tematické projekty</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CENÍK -->
+<section class="pricing-section" id="cenik">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Ceník</div>
+      <div class="section-title">Transparentní<br><em>ceny focení</em></div>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="price-card reveal">
+        <div class="price-card-tag">Portréty & rodinné</div>
+        <h3>Mini session</h3>
+        <p>Ideální pro rychlé portréty, těhotenské focení nebo focení mazlíčků.</p>
+        <div class="price-amount">1 500 <span>Kč</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>30 minut focení</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>20+ upravených snímků</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>1 lokace</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dodání do 2 týdnů</li>
+        </ul>
+      </div>
+
+      <div class="price-card featured reveal">
+        <div class="price-tag-badge">Nejoblíbenější</div>
+        <div class="price-card-tag">Rodinné & párové</div>
+        <h3>Full session</h3>
+        <p>Kompletní focení pro rodiny, páry nebo tematické projekty.</p>
+        <div class="price-amount">2 900 <span>Kč</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>60–90 minut focení</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>50+ upravených snímků</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>2 lokace</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dodání do 2 týdnů</li>
+        </ul>
+      </div>
+
+      <div class="price-card reveal">
+        <div class="price-card-tag">Svatby</div>
+        <h3>Svatební den</h3>
+        <p>Celý váš svatební den zachycený v přirozených okamžicích.</p>
+        <div class="price-amount">Od 8 000 <span>Kč</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Celý den focení</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>200+ upravených snímků</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Přípravy až první tanec</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dodání do 4 týdnů</li>
+        </ul>
+      </div>
+
+    </div>
+    <p class="pricing-note reveal">Ceny jsou orientační — finální nabídku vám ráda připravím na míru. Napište mi!</p>
+  </div>
+</section>
+
+<!-- PRŮBĚH -->
+<section class="process-section">
+  <div class="container">
+    <div class="reveal" style="text-align:center; margin-bottom:0;">
+      <div class="section-tag" style="text-align:center;">Jak to funguje</div>
+      <div class="section-title" style="text-align:center;">Průběh<br><em>naší spolupráce</em></div>
+    </div>
+    <div class="process-icons-grid">
+      <div class="process-icon-item reveal">
+        <div class="process-icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3>Napíšete mi</h3>
+        <p>Povíme si o vašich přáních a představách. Domluvíme termín, lokaci a vše potřebné.</p>
+      </div>
+      <div class="process-icon-item reveal">
+        <div class="process-icon-circle">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Setkáme se</h3>
+        <p>Přirozené focení bez stresu a pózování. Jen vy, vaše emoce a já se svým Nikonem.</p>
+      </div>
+      <div class="process-icon-item reveal">
+        <div class="process-icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <h3>Dostanete fotky</h3>
+        <p>Všechny upravené snímky bez omezení počtu — rychle, abyste si vzpomínky mohli užít skoro hned.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<div class="container">
+  <section class="contact-section" id="kontakt">
+    <div class="contact-img reveal-left">
+      <img src="https://hubackovafoto.cz/wp-content/uploads/2025/10/formular.jpg" alt="Fotografka Nikola Hubáčková">
+    </div>
+    <div class="contact-form-wrap reveal">
+      <div class="section-tag">Kontakt</div>
+      <h2>Napište mi<br>a <em>domluvíme se</em></h2>
+      <p>Ráda si o vašem focení popovídám. Odpovídám do 24 hodin.</p>
+      <form action="https://formspree.io/f/XXXXX" method="POST" id="contact-form">
+        <div class="form-row">
+          <div class="form-group"><input type="text" name="jmeno" placeholder="Vaše jméno" required></div>
+          <div class="form-group"><input type="email" name="email" placeholder="E-mail" required></div>
+        </div>
+        <div class="form-group"><input type="tel" name="telefon" placeholder="Telefon"></div>
+        <div class="form-group"><textarea name="zprava" rows="4" placeholder="Co byste chtěli nafotit?" required></textarea></div>
+        <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+          Odeslat zprávu
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+      <div class="contact-info">
+        <a href="tel:+420739486263" class="contact-info-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +420 739 486 263
+        </a>
+        <a href="mailto:nikola@hubackovafoto.cz" class="contact-info-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          nikola@hubackovafoto.cz
+        </a>
+        <a href="https://www.instagram.com/hubackova.photo/" target="_blank" class="contact-info-item">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          @hubackova.photo
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <a href="#" class="footer-logo">Nikola <em>Hubáčková</em></a>
+      <ul class="footer-links">
+        <li><a href="#o-mne">O mně</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#sluzby">Služby</a></li>
+        <li><a href="#cenik">Ceník</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Nikola Hubáčková · Všechna práva vyhrazena.</span>
+      <span>Web: <a href="https://janyskovadigital.cz">Janyskova Digital</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // NAV SCROLL + SCROLLSPY
+  const navbar = document.getElementById('navbar');
+  const sections = ['o-mne','galerie','sluzby','cenik','kontakt'];
+
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    const scrollPos = window.scrollY + 130;
+    let current = '';
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollPos) current = id;
+    });
+    document.querySelectorAll('.nav-links a[data-section]').forEach(a => {
+      a.classList.toggle('active', a.dataset.section === current);
+    });
+  });
+
+  // SLIDESHOW
+  const track = document.getElementById('slideshow-track');
+  const slides = track.querySelectorAll('.slide');
+  const dotsContainer = document.getElementById('slide-dots');
+  const totalSlides = slides.length;
+  const visibleSlides = window.innerWidth < 900 ? 1 : 3;
+  let currentSlide = 0;
+  let maxSlide = totalSlides - visibleSlides;
+
+  // Create dots
+  for (let i = 0; i <= maxSlide; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'slide-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  }
+
+  function goToSlide(n) {
+    currentSlide = Math.max(0, Math.min(n, maxSlide));
+    const slideWidth = slides[0].offsetWidth + 16;
+    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    document.querySelectorAll('.slide-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  document.getElementById('slide-prev').onclick = () => goToSlide(currentSlide - 1);
+  document.getElementById('slide-next').onclick = () => goToSlide(currentSlide + 1);
+
+  // Auto slide
+  setInterval(() => goToSlide(currentSlide >= maxSlide ? 0 : currentSlide + 1), 4000);
+
+  // LIGHTBOX
+  const lightboxImgs = [
+    'https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce2.jpg',
+    'https://hubackovafoto.cz/wp-content/uploads/2025/09/DSC054841.jpg',
+    'https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce_svatby.jpg',
+    'https://hubackovafoto.cz/wp-content/uploads/2025/11/DSC00932-1.jpg',
+    'https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce_vanoce.jpg',
+    'https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce.jpg'
+  ];
+  let currentLightbox = 0;
+
+  function openLightbox(i) {
+    currentLightbox = i;
+    document.getElementById('lightbox-img').src = lightboxImgs[i];
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function lightboxNav(dir) {
+    currentLightbox = (currentLightbox + dir + lightboxImgs.length) % lightboxImgs.length;
+    document.getElementById('lightbox-img').src = lightboxImgs[currentLightbox];
+  }
+
+  document.getElementById('lightbox').addEventListener('click', e => {
+    if (e.target === e.currentTarget) closeLightbox();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+
+  // REVEAL
+  const revObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal, .reveal-left').forEach(el => revObs.observe(el));
+
+  // FORM
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('button');
+    const orig = btn.innerHTML;
+    btn.innerHTML = 'Odesílám...';
+    btn.disabled = true;
+    try {
+      await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      btn.innerHTML = '✓ Zpráva odeslána!';
+      form.reset();
+    } catch {
+      btn.innerHTML = orig;
+      btn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
