@@ -117,11 +117,6 @@
   .btn-primary:hover { background: var(--dark); gap: 18px; }
   .btn-primary svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; }
 
-  .hero-scroll { position: absolute; bottom: 40px; left: 60px; display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--stone); }
-  .hero-scroll::before { content: ''; width: 1px; height: 40px; background: var(--stone); animation: scroll-pulse 2s ease-in-out infinite; }
-
-  @keyframes scroll-pulse { 0%, 100% { opacity: 0.3; transform: scaleY(0.6); } 50% { opacity: 1; transform: scaleY(1); } }
-
   /* MARQUEE */
   .marquee-section { background: var(--forest); padding: 16px 0; overflow: hidden; }
   .marquee-track { display: flex; gap: 50px; animation: marquee 30s linear infinite; width: max-content; }
@@ -561,7 +556,6 @@
   <div class="hero-right">
     <img src="https://hubackovafoto.cz/wp-content/uploads/2025/10/sekce.jpg" alt="Fotografka Nikola Hubáčková při focení" loading="eager">
   </div>
-  <div class="hero-scroll">Scrollovat</div>
 </section>
 
 <!-- MARQUEE -->
