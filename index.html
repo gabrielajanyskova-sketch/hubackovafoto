@@ -687,17 +687,35 @@
   const navbar = document.getElementById('navbar');
   const sections = ['o-mne','galerie','sluzby','cenik','kontakt'];
 
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-    const scrollPos = window.scrollY + 130;
-    let current = '';
-    sections.forEach(id => {
+  // Cache section offsets — re-read only on resize, not on every scroll
+  const navLinks = Array.from(document.querySelectorAll('.nav-links a[data-section]'));
+  let sectionOffsets = [];
+
+  function cacheSectionOffsets() {
+    sectionOffsets = sections.map(id => {
       const el = document.getElementById(id);
-      if (el && el.offsetTop <= scrollPos) current = id;
+      return { id, top: el ? el.offsetTop : 0 };
     });
-    document.querySelectorAll('.nav-links a[data-section]').forEach(a => {
-      a.classList.toggle('active', a.dataset.section === current);
-    });
+  }
+  cacheSectionOffsets();
+
+  // Throttle scroll with rAF to avoid layout thrashing
+  let scrollTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+      requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        navbar.classList.toggle('scrolled', scrollY > 50);
+        const scrollPos = scrollY + 130;
+        let current = '';
+        for (const s of sectionOffsets) {
+          if (s.top <= scrollPos) current = s.id;
+        }
+        navLinks.forEach(a => a.classList.toggle('active', a.dataset.section === current));
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
   });
 
   // SLIDESHOW
@@ -715,7 +733,15 @@
     cachedSlideWidth = parseFloat(getComputedStyle(slides[0]).width) + 16;
   }
   updateSlideWidth();
-  window.addEventListener('resize', updateSlideWidth);
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      updateSlideWidth();
+      cacheSectionOffsets();
+    }, 150);
+  });
 
   for (let i = 0; i <= maxSlide; i++) {
     const dot = document.createElement('button');
