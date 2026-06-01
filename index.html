@@ -697,7 +697,13 @@
       return { id, top: el ? el.offsetTop : 0 };
     });
   }
-  cacheSectionOffsets();
+
+  // Read offsetTop only after full layout is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', cacheSectionOffsets);
+  } else {
+    cacheSectionOffsets();
+  }
 
   // Throttle scroll with rAF to avoid layout thrashing
   let scrollTicking = false;
