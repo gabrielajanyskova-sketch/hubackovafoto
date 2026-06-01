@@ -554,7 +554,7 @@
     </a>
   </div>
   <div class="hero-right">
-<img src="images/foto-hero.webp" alt="Párové focení — přirozený moment" loading="eager">
+<img src="images/foto-hero.webp" alt="Párové focení — přirozený moment" loading="eager" fetchpriority="high">
   </div>
 </section>
 
@@ -905,7 +905,7 @@
 
   function goToSlide(n) {
     currentSlide = Math.max(0, Math.min(n, maxSlide));
-    const slideWidth = slides[0].offsetWidth + 16;
+    const slideWidth = parseFloat(getComputedStyle(slides[0]).width) + 16;
     track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
     document.querySelectorAll('.slide-dot').forEach((d, i) => {
       d.classList.toggle('active', i === currentSlide);
