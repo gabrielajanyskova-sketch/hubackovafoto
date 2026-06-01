@@ -390,7 +390,11 @@
   <!-- O MNĚ -->
   <section class="about-section" id="o-mne">
     <div class="about-visual reveal-left">
-      <img class="about-img-main" src="images/foto-o-mne.webp" alt="Nikola Hubáčková fotografka při focení">
+      <img class="about-img-main"
+        src="images/foto-o-mne.webp"
+        sizes="(max-width: 900px) 100vw, 42vw"
+        width="800" height="826"
+        alt="Nikola Hubáčková fotografka při focení">
       <div class="about-tag-float">Fotografka</div>
     </div>
     <div class="about-text reveal">
@@ -428,35 +432,35 @@
       <div class="slideshow-track-outer">
         <div class="slideshow-track" id="slideshow-track">
           <div class="slide" onclick="openLightbox(0)">
-            <img src="images/foto-01.webp" alt="Svatební fotografie — závoj" loading="lazy">
+            <img src="images/foto-01.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Svatební fotografie — závoj" loading="lazy">
             <div class="slide-label">Svatby</div>
           </div>
           <div class="slide" onclick="openLightbox(1)">
-            <img src="images/foto-02.webp" alt="Párové focení — příroda" loading="lazy">
+            <img src="images/foto-02.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Párové focení — příroda" loading="lazy">
             <div class="slide-label">Párové focení</div>
           </div>
           <div class="slide" onclick="openLightbox(2)">
-            <img src="images/foto-03.webp" alt="Dětské focení — miminko" loading="lazy">
+            <img src="images/foto-03.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Dětské focení — miminko" loading="lazy">
             <div class="slide-label">Dětské focení</div>
           </div>
           <div class="slide" onclick="openLightbox(3)">
-            <img src="images/foto-04.webp" alt="Těhotenské focení" loading="lazy">
+            <img src="images/foto-04.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Těhotenské focení" loading="lazy">
             <div class="slide-label">Těhotenské</div>
           </div>
           <div class="slide" onclick="openLightbox(4)">
-            <img src="images/foto-05.webp" alt="Svatební detail — dort" loading="lazy">
+            <img src="images/foto-05.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Svatební detail — dort" loading="lazy">
             <div class="slide-label">Svatební detaily</div>
           </div>
           <div class="slide" onclick="openLightbox(5)">
-            <img src="images/foto-06.webp" alt="Focení zvířat — pes" loading="lazy">
+            <img src="images/foto-06.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Focení zvířat — pes" loading="lazy">
             <div class="slide-label">Zvířata</div>
           </div>
           <div class="slide" onclick="openLightbox(6)">
-            <img src="images/foto-07.webp" alt="Rodinné focení — most" loading="lazy">
+            <img src="images/foto-07.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Rodinné focení — most" loading="lazy">
             <div class="slide-label">Rodinné focení</div>
           </div>
           <div class="slide" onclick="openLightbox(7)">
-            <img src="images/foto-08.webp" alt="Svatební fotografie — západ slunce" loading="lazy">
+            <img src="images/foto-08.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Svatební fotografie — západ slunce" loading="lazy">
             <div class="slide-label">Svatby</div>
           </div>
         </div>
@@ -491,7 +495,7 @@
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
-        <img src="images/foto-sluzby-svatby.webp" alt="Svatební fotograf Olomoucký kraj">
+        <img src="images/foto-sluzby-svatby.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Svatební fotograf Olomoucký kraj">
         <div class="service-overlay"></div>
         <div class="service-info">
           <div class="service-num">01</div>
@@ -500,7 +504,7 @@
         </div>
       </div>
       <div class="service-card reveal">
-        <img src="images/foto-sluzby-rodina.webp" alt="Rodinné focení těhotenské zvířata">
+        <img src="images/foto-sluzby-rodina.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Rodinné focení těhotenské zvířata">
         <div class="service-overlay"></div>
         <div class="service-info">
           <div class="service-num">02</div>
@@ -509,7 +513,7 @@
         </div>
       </div>
       <div class="service-card reveal">
-        <img src="images/foto-sluzby-vanoce.webp" alt="Vánoční a tematické focení ateliér">
+        <img src="images/foto-sluzby-vanoce.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Vánoční a tematické focení ateliér">
         <div class="service-overlay"></div>
         <div class="service-info">
           <div class="service-num">03</div>
@@ -611,7 +615,7 @@
 <div class="container">
   <section class="contact-section" id="kontakt">
     <div class="contact-img reveal-left">
-      <img src="images/foto-kontakt.webp" alt="Fotografka Nikola Hubáčková">
+      <img src="images/foto-kontakt.webp" sizes="(max-width: 900px) 100vw, 50vw" alt="Fotografka Nikola Hubáčková" loading="lazy">
     </div>
     <div class="contact-form-wrap reveal">
       <div class="section-tag">Kontakt</div>
@@ -705,6 +709,13 @@
   const maxSlide = totalSlides - visibleCount;
   let currentSlide = 0;
   let slideInterval;
+  let cachedSlideWidth = 0;
+
+  function updateSlideWidth() {
+    cachedSlideWidth = parseFloat(getComputedStyle(slides[0]).width) + 16;
+  }
+  updateSlideWidth();
+  window.addEventListener('resize', updateSlideWidth);
 
   for (let i = 0; i <= maxSlide; i++) {
     const dot = document.createElement('button');
@@ -714,13 +725,12 @@
     dotsContainer.appendChild(dot);
   }
 
+  const slideDots = dotsContainer.querySelectorAll('.slide-dot');
+
   function goToSlide(n) {
     currentSlide = Math.max(0, Math.min(n, maxSlide));
-    const slideWidth = parseFloat(getComputedStyle(slides[0]).width) + 16;
-    track.style.transform = 'translateX(-' + (currentSlide * slideWidth) + 'px)';
-    document.querySelectorAll('.slide-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === currentSlide);
-    });
+    track.style.transform = 'translateX(-' + (currentSlide * cachedSlideWidth) + 'px)';
+    slideDots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
   }
 
   document.getElementById('slide-prev').onclick = () => { clearInterval(slideInterval); goToSlide(currentSlide - 1); startInterval(); };
