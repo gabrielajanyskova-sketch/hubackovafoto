@@ -49,7 +49,7 @@
     --forest-light: #6b8a6b;
     --dark: #2a2018;
     --text: #3a2e22;
-    --text-dim: #8a7a6a;
+    --text-dim: #6b5a4a;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -87,11 +87,11 @@
   .logo-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--forest); font-weight: 400; }
 
   .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
-  .nav-links a { color: var(--text-dim); text-decoration: none; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; padding: 6px 12px; border-radius: 100px; }
+  .nav-links a { color: var(--text-dim); text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; padding: 6px 12px; border-radius: 100px; }
   .nav-links a:hover { color: var(--forest); }
   .nav-links a.active { color: var(--forest); background: rgba(74,94,74,0.08); }
 
-  .nav-ig a { display: flex; align-items: center; gap: 6px; color: var(--text-dim); text-decoration: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; padding: 6px 12px; }
+  .nav-ig a { display: flex; align-items: center; gap: 6px; color: var(--text-dim); text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; padding: 6px 12px; }
   .nav-ig a:hover { color: var(--forest); }
   .nav-ig svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -118,13 +118,13 @@
   /* MARQUEE */
   .marquee-section { background: var(--forest); padding: 16px 0; overflow: hidden; }
   .marquee-track { display: flex; gap: 50px; animation: marquee 30s linear infinite; width: max-content; }
-  .marquee-item { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: rgba(255,255,255,0.65); white-space: nowrap; display: flex; align-items: center; gap: 20px; }
-  .marquee-item::after { content: '✦'; font-size: 7px; color: rgba(255,255,255,0.35); font-style: normal; }
+  .marquee-item { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: rgba(255,255,255,0.92); white-space: nowrap; display: flex; align-items: center; gap: 20px; }
+  .marquee-item::after { content: '✦'; font-size: 7px; color: rgba(255,255,255,0.5); font-style: normal; }
   @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
   /* LAYOUT */
   .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }
-  .section-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--forest); margin-bottom: 16px; font-weight: 400; }
+  .section-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--forest); margin-bottom: 16px; font-weight: 500; }
   .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4.5vw, 58px); font-weight: 300; line-height: 1.1; letter-spacing: -0.5px; color: var(--dark); margin-bottom: 50px; }
   .section-title em { font-style: italic; color: var(--forest); }
 
@@ -139,57 +139,25 @@
   .about-list li { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); }
   .about-list li::before { content: ''; width: 20px; height: 1px; background: var(--forest); flex-shrink: 0; }
 
-  /* GALERIE */
-  .gallery-section { padding: 100px 0; background: var(--warm); }
+  /* SLIDESHOW GALERIE */
+  .gallery-section { padding: 100px 0; background: var(--warm); overflow: hidden; }
+  .gallery-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 50px; }
+  .slideshow-wrap { position: relative; }
+  .slideshow-track-outer { overflow: hidden; }
+  .slideshow-track { display: flex; gap: 16px; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); will-change: transform; }
+  .slide { flex-shrink: 0; width: calc(33.333% - 11px); aspect-ratio: 3/2; overflow: hidden; position: relative; cursor: pointer; background: var(--sand); }
+  .slide img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.78); transition: transform 0.6s ease, filter 0.4s ease; display: block; }
+  .slide:hover img { transform: scale(1.05); filter: saturate(1); }
+  .slide-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(42,32,24,0.7), transparent); font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: rgba(255,255,255,0.85); opacity: 0; transition: opacity 0.3s; }
+  .slide:hover .slide-label { opacity: 1; }
 
-  .gallery-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 50px;
-  }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 280px;
-    gap: 10px;
-  }
-
-  .gallery-item {
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    background: var(--sand);
-  }
-
-  .gallery-item.gi-tall { grid-row: span 2; }
-  .gallery-item.gi-wide { grid-column: span 2; }
-
-  .gallery-item img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    filter: saturate(0.78);
-    transition: transform 0.6s ease, filter 0.4s ease;
-    display: block;
-  }
-
-  .gallery-item:hover img { transform: scale(1.05); filter: saturate(1); }
-
-  .gallery-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(42,32,24,0.6), transparent 50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    display: flex; align-items: flex-end; padding: 20px;
-  }
-
-  .gallery-item:hover .gallery-overlay { opacity: 1; }
-
-  .gallery-overlay span {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px; font-style: italic; color: white;
-  }
+  .slideshow-controls { display: flex; align-items: center; gap: 15px; margin-top: 30px; justify-content: center; }
+  .slide-btn { width: 48px; height: 48px; border-radius: 50%; background: transparent; border: 1px solid var(--sand); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; color: var(--text-dim); }
+  .slide-btn:hover { background: var(--forest); border-color: var(--forest); color: white; }
+  .slide-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .slide-dots { display: flex; gap: 8px; }
+  .slide-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sand); cursor: pointer; transition: all 0.3s; border: none; }
+  .slide-dot.active { background: var(--forest); width: 24px; border-radius: 3px; }
 
   /* LIGHTBOX */
   .lightbox { position: fixed; inset: 0; background: rgba(42,32,24,0.95); z-index: 999; display: none; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
@@ -222,12 +190,12 @@
   .price-card:hover { border-color: var(--forest); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(42,32,24,0.08); }
   .price-card.featured { background: var(--forest); border-color: var(--forest); }
   .price-tag-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--dark); color: white; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 5px 16px; white-space: nowrap; font-family: 'Jost', sans-serif; }
-  .price-card-tag { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--forest); margin-bottom: 15px; font-weight: 400; }
+  .price-card-tag { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--forest); margin-bottom: 15px; font-weight: 500; }
   .price-card.featured .price-card-tag { color: rgba(255,255,255,0.6); }
   .price-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; color: var(--dark); margin-bottom: 8px; }
   .price-card.featured h3 { color: white; }
   .price-card > p { font-size: 14px; color: var(--text-dim); margin-bottom: 25px; font-weight: 300; line-height: 1.6; }
-  .price-card.featured > p { color: rgba(255,255,255,0.6); }
+  .price-card.featured > p { color: rgba(255,255,255,0.7); }
   .price-amount { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; color: var(--dark); line-height: 1; margin-bottom: 30px; letter-spacing: -1px; }
   .price-amount span { font-size: 18px; color: var(--text-dim); letter-spacing: 0; }
   .price-card.featured .price-amount { color: white; }
@@ -236,15 +204,15 @@
   .price-card.featured .price-divider { background: rgba(255,255,255,0.15); }
   .price-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .price-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-dim); font-weight: 300; }
-  .price-card.featured .price-features li { color: rgba(255,255,255,0.7); }
+  .price-card.featured .price-features li { color: rgba(255,255,255,0.8); }
   .price-features li svg { width: 14px; height: 14px; stroke: var(--forest); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-  .price-card.featured .price-features li svg { stroke: rgba(255,255,255,0.7); }
+  .price-card.featured .price-features li svg { stroke: rgba(255,255,255,0.8); }
   .pricing-note { text-align: center; font-size: 18px; color: var(--text-dim); margin-top: 30px; font-style: italic; font-family: 'Cormorant Garamond', serif; }
 
   /* PROCESS */
   .process-section { padding: 100px 0; background: var(--dark); position: relative; overflow: hidden; }
   .process-section::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; border-radius: 50%; background: rgba(74,94,74,0.07); pointer-events: none; }
-  .process-section .section-tag { color: rgba(255,255,255,0.35); }
+  .process-section .section-tag { color: rgba(255,255,255,0.5); }
   .process-section .section-title { color: #faf8f4; }
   .process-icons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 60px; }
   .process-icon-item { text-align: center; padding: 0 40px; position: relative; }
@@ -253,7 +221,7 @@
   .process-icon-item:hover .process-icon-circle { border-color: var(--forest-light); background: rgba(74,94,74,0.15); }
   .process-icon-circle svg { width: 22px; height: 22px; stroke: var(--forest-light); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
   .process-icon-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: #faf8f4; margin-bottom: 14px; }
-  .process-icon-item p { font-size: 15px; color: rgba(250,248,244,0.42); line-height: 1.75; font-weight: 300; }
+  .process-icon-item p { font-size: 15px; color: rgba(250,248,244,0.55); line-height: 1.75; font-weight: 300; }
 
   /* CONTACT */
   .contact-section { padding: 130px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -281,22 +249,22 @@
   .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #faf8f4; text-decoration: none; }
   .footer-logo em { font-style: italic; color: var(--forest-light); }
   .footer-links { display: flex; gap: 30px; list-style: none; }
-  .footer-links a { color: rgba(250,248,244,0.3); text-decoration: none; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; }
+  .footer-links a { color: rgba(250,248,244,0.5); text-decoration: none; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; }
   .footer-links a:hover { color: var(--forest-light); }
-  .footer-bottom { border-top: 1px solid rgba(250,248,244,0.05); padding-top: 22px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(250,248,244,0.18); flex-wrap: wrap; gap: 10px; }
-  .footer-bottom a { color: rgba(107,138,107,0.5); text-decoration: none; }
+  .footer-bottom { border-top: 1px solid rgba(250,248,244,0.05); padding-top: 22px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(250,248,244,0.3); flex-wrap: wrap; gap: 10px; }
+  .footer-bottom a { color: rgba(107,138,107,0.6); text-decoration: none; }
 
   /* COOKIE */
-  .cookie-banner { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(150px); width: calc(100% - 48px); max-width: 550px; background: rgba(19,13,24,0.97); border: 1px solid rgba(74,94,74,0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.6); backdrop-filter: blur(20px); border-radius: 20px; padding: 25px; z-index: 9999; display: none; flex-direction: column; gap: 15px; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+  .cookie-banner { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(150px); width: calc(100% - 48px); max-width: 550px; background: rgba(42,32,24,0.97); border: 1px solid rgba(74,94,74,0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.6); backdrop-filter: blur(20px); border-radius: 20px; padding: 25px; z-index: 9999; display: none; flex-direction: column; gap: 15px; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
   .cookie-banner.show { display: flex; transform: translateX(-50%) translateY(0); }
-  .cookie-text { font-size: 14px; color: rgba(250,248,244,0.6); margin: 0; line-height: 1.5; font-weight: 300; }
+  .cookie-text { font-size: 14px; color: rgba(250,248,244,0.7); margin: 0; line-height: 1.5; font-weight: 300; }
   .cookie-text strong { color: #faf8f4; }
   .cookie-text a { color: var(--forest-light); text-decoration: none; }
   .cookie-btns { display: flex; gap: 12px; justify-content: flex-end; }
   .cookie-btn { padding: 10px 22px; border-radius: 50px; font-size: 13px; font-weight: 500; cursor: pointer; transition: 0.2s; border: none; letter-spacing: 0.5px; font-family: 'Jost', sans-serif; }
   .cookie-accept { background: var(--forest); color: #fff; }
   .cookie-accept:hover { background: var(--forest-light); }
-  .cookie-reject { background: rgba(255,255,255,0.05); color: #94a3b8; border: 1px solid rgba(255,255,255,0.15); }
+  .cookie-reject { background: rgba(255,255,255,0.08); color: rgba(250,248,244,0.7); border: 1px solid rgba(255,255,255,0.15); }
   .cookie-reject:hover { color: #faf8f4; }
 
   /* REVEAL */
@@ -317,10 +285,7 @@
     .about-section { grid-template-columns: 1fr; padding: 80px 0; gap: 50px; }
     .about-visual { height: 320px; }
     .about-tag-float { display: none; }
-    .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 180px; }
-    .gallery-item.gi-tall { grid-row: span 1; }
-    .gallery-item.gi-wide { grid-column: span 1; }
-    .gallery-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .slide { width: calc(100% - 0px); }
     .services-grid { grid-template-columns: 1fr; }
     .service-card { aspect-ratio: 4/3; }
     .pricing-grid { grid-template-columns: 1fr; }
@@ -330,6 +295,7 @@
     .contact-img { height: 280px; }
     .container { padding: 0 24px; }
     .form-row { grid-template-columns: 1fr; }
+    .gallery-header { flex-direction: column; align-items: flex-start; gap: 20px; }
   }
 </style>
 </head>
@@ -355,7 +321,6 @@
       <span class="logo-title">Fotografka</span>
     </div>
   </a>
-
   <ul class="nav-links">
     <li><a href="#o-mne" data-section="o-mne">O mně</a></li>
     <li><a href="#galerie" data-section="galerie">Galerie</a></li>
@@ -363,7 +328,6 @@
     <li><a href="#cenik" data-section="cenik">Ceník</a></li>
     <li><a href="#kontakt" data-section="kontakt">Kontakt</a></li>
   </ul>
-
   <div class="nav-ig">
     <a href="https://www.instagram.com/hubackova.photo/" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
@@ -371,6 +335,8 @@
     </a>
   </div>
 </nav>
+
+<main>
 
 <!-- HERO -->
 <section class="hero">
@@ -388,17 +354,17 @@
   </div>
   <div class="hero-right">
     <img
-  src="images/foto-hero.webp"
-  srcset="images/foto-hero-mobile.webp 400w, images/foto-hero.webp 800w"
-  sizes="(max-width: 900px) 100vw, 50vw"
-  alt="Párové focení — přirozený moment"
-  loading="eager"
-  fetchpriority="high">
+      src="images/foto-hero.webp"
+      srcset="images/foto-hero-mobile.webp 400w, images/foto-hero.webp 800w"
+      sizes="(max-width: 900px) 100vw, 50vw"
+      alt="Párové focení — přirozený moment"
+      loading="eager"
+      fetchpriority="high">
   </div>
 </section>
 
 <!-- MARQUEE -->
-<div class="marquee-section">
+<div class="marquee-section" aria-hidden="true">
   <div class="marquee-track">
     <span class="marquee-item">Svatby</span>
     <span class="marquee-item">Rodinné focení</span>
@@ -424,9 +390,7 @@
   <!-- O MNĚ -->
   <section class="about-section" id="o-mne">
     <div class="about-visual reveal-left">
-      <img class="about-img-main"
-        src="images/foto-o-mne.webp"
-        alt="Nikola Hubáčková fotografka při focení">
+      <img class="about-img-main" src="images/foto-o-mne.webp" alt="Nikola Hubáčková fotografka při focení">
       <div class="about-tag-float">Fotografka</div>
     </div>
     <div class="about-text reveal">
@@ -460,50 +424,62 @@
         <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
-
-    <div class="gallery-grid reveal">
-      <div class="gallery-item gi-tall" onclick="openLightbox(0)">
-        <img src="images/foto-01.webp" alt="Svatební fotografie — závoj" loading="lazy">
-        <div class="gallery-overlay"><span>Svatby</span></div>
+    <div class="slideshow-wrap">
+      <div class="slideshow-track-outer">
+        <div class="slideshow-track" id="slideshow-track">
+          <div class="slide" onclick="openLightbox(0)">
+            <img src="images/foto-01.webp" alt="Svatební fotografie — závoj" loading="lazy">
+            <div class="slide-label">Svatby</div>
+          </div>
+          <div class="slide" onclick="openLightbox(1)">
+            <img src="images/foto-02.webp" alt="Párové focení — příroda" loading="lazy">
+            <div class="slide-label">Párové focení</div>
+          </div>
+          <div class="slide" onclick="openLightbox(2)">
+            <img src="images/foto-03.webp" alt="Dětské focení — miminko" loading="lazy">
+            <div class="slide-label">Dětské focení</div>
+          </div>
+          <div class="slide" onclick="openLightbox(3)">
+            <img src="images/foto-04.webp" alt="Těhotenské focení" loading="lazy">
+            <div class="slide-label">Těhotenské</div>
+          </div>
+          <div class="slide" onclick="openLightbox(4)">
+            <img src="images/foto-05.webp" alt="Svatební detail — dort" loading="lazy">
+            <div class="slide-label">Svatební detaily</div>
+          </div>
+          <div class="slide" onclick="openLightbox(5)">
+            <img src="images/foto-06.webp" alt="Focení zvířat — pes" loading="lazy">
+            <div class="slide-label">Zvířata</div>
+          </div>
+          <div class="slide" onclick="openLightbox(6)">
+            <img src="images/foto-07.webp" alt="Rodinné focení — most" loading="lazy">
+            <div class="slide-label">Rodinné focení</div>
+          </div>
+          <div class="slide" onclick="openLightbox(7)">
+            <img src="images/foto-08.webp" alt="Svatební fotografie — západ slunce" loading="lazy">
+            <div class="slide-label">Svatby</div>
+          </div>
+        </div>
       </div>
-      <div class="gallery-item gi-wide" onclick="openLightbox(1)">
-        <img src="images/foto-02.webp" alt="Párové focení — příroda" loading="lazy">
-        <div class="gallery-overlay"><span>Párové focení</span></div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(2)">
-        <img src="images/foto-03.webp" alt="Dětské focení — miminko" loading="lazy">
-        <div class="gallery-overlay"><span>Dětské focení</span></div>
-      </div>
-      <div class="gallery-item gi-wide" onclick="openLightbox(3)">
-        <img src="images/foto-04.webp" alt="Těhotenské focení" loading="lazy">
-        <div class="gallery-overlay"><span>Těhotenské</span></div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(4)">
-        <img src="images/foto-05.webp" alt="Svatební detail — dort" loading="lazy">
-        <div class="gallery-overlay"><span>Svatební detaily</span></div>
-      </div>
-      <div class="gallery-item gi-tall" onclick="openLightbox(5)">
-        <img src="images/foto-06.webp" alt="Focení zvířat — pes" loading="lazy">
-        <div class="gallery-overlay"><span>Zvířata</span></div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox(6)">
-        <img src="images/foto-07.webp" alt="Rodinné focení — most" loading="lazy">
-        <div class="gallery-overlay"><span>Rodinné focení</span></div>
-      </div>
-      <div class="gallery-item gi-wide" onclick="openLightbox(7)">
-        <img src="images/foto-08.webp" alt="Svatební fotografie — západ slunce" loading="lazy">
-        <div class="gallery-overlay"><span>Svatby</span></div>
+      <div class="slideshow-controls">
+        <button class="slide-btn" id="slide-prev" aria-label="Předchozí fotografie">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="slide-dots" id="slide-dots"></div>
+        <button class="slide-btn" id="slide-next" aria-label="Další fotografie">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
       </div>
     </div>
   </div>
 </section>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <button class="lightbox-prev" onclick="lightboxNav(-1)">‹</button>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Prohlížeč fotografií">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Zavřít">✕</button>
+  <button class="lightbox-prev" onclick="lightboxNav(-1)" aria-label="Předchozí">‹</button>
   <img id="lightbox-img" src="" alt="">
-  <button class="lightbox-next" onclick="lightboxNav(1)">›</button>
+  <button class="lightbox-next" onclick="lightboxNav(1)" aria-label="Další">›</button>
 </div>
 
 <!-- SLUŽBY -->
@@ -644,7 +620,6 @@
       <form id="contact-form">
         <input type="hidden" name="access_key" value="TADY_VLOZ_WEB3FORMS_KEY">
         <input type="hidden" name="subject" value="Nová poptávka — hubackovafoto.cz">
-        <input type="hidden" name="redirect" value="https://hubackovafoto.cz/dekujeme.html">
         <div class="form-row">
           <div class="form-group"><input type="text" name="jmeno" placeholder="Vaše jméno" required></div>
           <div class="form-group"><input type="email" name="email" placeholder="E-mail" required></div>
@@ -673,6 +648,8 @@
     </div>
   </section>
 </div>
+
+</main>
 
 <footer>
   <div class="container">
@@ -718,6 +695,41 @@
       a.classList.toggle('active', a.dataset.section === current);
     });
   });
+
+  // SLIDESHOW
+  const track = document.getElementById('slideshow-track');
+  const slides = track.querySelectorAll('.slide');
+  const dotsContainer = document.getElementById('slide-dots');
+  const visibleCount = window.innerWidth < 900 ? 1 : 3;
+  const totalSlides = slides.length;
+  const maxSlide = totalSlides - visibleCount;
+  let currentSlide = 0;
+  let slideInterval;
+
+  for (let i = 0; i <= maxSlide; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'slide-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Přejít na fotografii ' + (i + 1));
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  }
+
+  function goToSlide(n) {
+    currentSlide = Math.max(0, Math.min(n, maxSlide));
+    const slideWidth = parseFloat(getComputedStyle(slides[0]).width) + 16;
+    track.style.transform = 'translateX(-' + (currentSlide * slideWidth) + 'px)';
+    document.querySelectorAll('.slide-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  document.getElementById('slide-prev').onclick = () => { clearInterval(slideInterval); goToSlide(currentSlide - 1); startInterval(); };
+  document.getElementById('slide-next').onclick = () => { clearInterval(slideInterval); goToSlide(currentSlide + 1); startInterval(); };
+
+  function startInterval() {
+    slideInterval = setInterval(() => goToSlide(currentSlide >= maxSlide ? 0 : currentSlide + 1), 4000);
+  }
+  startInterval();
 
   // LIGHTBOX
   const lightboxImgs = [
@@ -778,7 +790,7 @@
     setTimeout(() => banner.style.display = 'none', 400);
   });
 
-  // FORMULÁŘ — Web3Forms
+  // FORMULÁŘ
   const form = document.getElementById('contact-form');
   form.addEventListener('submit', async e => {
     e.preventDefault();
@@ -795,9 +807,7 @@
       if (data.success) {
         btn.innerHTML = '✓ Zpráva odeslána!';
         form.reset();
-      } else {
-        throw new Error();
-      }
+      } else { throw new Error(); }
     } catch {
       btn.innerHTML = orig;
       btn.disabled = false;
