@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://hubackovafoto.cz/sitemap.xml
