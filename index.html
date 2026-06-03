@@ -413,7 +413,7 @@
       <p>Výsledné snímky dostanete rychle a <strong>bez omezení počtu</strong>.</p>
       <ul class="about-list">
         <li>Venkovní i ateliérové focení</li>
-        <li>Vlastní malý ateliér v Unčovicích u Olomouce</li>
+        <li>Vlastní malý ateliér pro focení v interiéru</li>
         <li>Olomoucký kraj a okolí</li>
         <li>Rychlé dodání upravených snímků</li>
         <li>Přirozený a uvolněný přístup</li>
@@ -630,7 +630,7 @@
       <h2>Napište mi<br>a <em>domluvíme se</em></h2>
       <p>Ráda si o vašem focení popovídám. Odpovídám do 24 hodin.</p>
       <form id="contact-form">
-        <input type="hidden" name="access_key" value="72528cfb-6a50-4788-a048-55124213dbb5">
+        <input type="hidden" name="access_key" value="TADY_VLOZ_WEB3FORMS_KEY">
         <input type="hidden" name="subject" value="Nová poptávka — hubackovafoto.cz">
         <div class="form-row">
           <div class="form-group"><input type="text" name="jmeno" placeholder="Vaše jméno" required></div>
@@ -831,15 +831,25 @@
     btn.innerHTML = 'Odesílám...';
     btn.disabled = true;
     try {
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: new FormData(form)
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
       });
       const data = await res.json();
       if (data.success) {
         btn.innerHTML = '✓ Zpráva odeslána!';
         form.reset();
-      } else { throw new Error(); }
+        setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 4000);
+      } else {
+        throw new Error(data.message);
+      }
     } catch {
       btn.innerHTML = orig;
       btn.disabled = false;
