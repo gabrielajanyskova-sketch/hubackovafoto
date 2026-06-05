@@ -385,18 +385,6 @@
   .footer-bottom { border-top: 1px solid rgba(250,248,244,0.1); padding-top: 22px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(250,248,244,0.52); flex-wrap: wrap; gap: 10px; }
   .footer-bottom a { color: #8db88d; text-decoration: none; }
 
-  /* COOKIE */
-  .cookie-banner { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(150px); width: calc(100% - 48px); max-width: 550px; background: rgba(42,32,24,0.97); border: 1px solid rgba(74,94,74,0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.6); backdrop-filter: blur(20px); border-radius: 20px; padding: 25px; z-index: 9999; display: none; flex-direction: column; gap: 15px; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
-  .cookie-banner.show { display: flex; transform: translateX(-50%) translateY(0); }
-  .cookie-text { font-size: 14px; color: rgba(250,248,244,0.7); margin: 0; line-height: 1.5; font-weight: 300; }
-  .cookie-text strong { color: #faf8f4; }
-  .cookie-text a { color: var(--forest-light); text-decoration: none; }
-  .cookie-btns { display: flex; gap: 12px; justify-content: flex-end; }
-  .cookie-btn { padding: 10px 22px; border-radius: 50px; font-size: 13px; font-weight: 500; cursor: pointer; transition: 0.2s; border: none; letter-spacing: 0.5px; font-family: 'Jost', sans-serif; }
-  .cookie-accept { background: var(--forest); color: #fff; }
-  .cookie-accept:hover { background: var(--forest-light); }
-  .cookie-reject { background: rgba(255,255,255,0.08); color: rgba(250,248,244,0.7); border: 1px solid rgba(255,255,255,0.15); }
-  .cookie-reject:hover { color: #faf8f4; }
 
   /* REVEAL */
   .reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.9s ease, transform 0.9s ease; }
@@ -836,19 +824,12 @@
       </ul>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Nikola Hubáčková · Všechna práva vyhrazena.</span>
+      <span>© 2026 Nikola Hubáčková · Unčovice 69, 784 01 Litovel · <a href="mailto:nikola@hubackovafoto.cz">nikola@hubackovafoto.cz</a></span>
       <span>Web: <a href="https://janyskovadigital.cz">Janyskova Digital</a></span>
     </div>
   </div>
 </footer>
 
-<div id="cookie-banner" class="cookie-banner">
-  <p class="cookie-text"><strong>Nastavení cookies.</strong> Tento web používá k měření návštěvnosti soubory cookies. Více informací v <a href="#">ochraně osobních údajů</a>.</p>
-  <div class="cookie-btns">
-    <button id="cookie-reject" class="cookie-btn cookie-reject">Odmítnout</button>
-    <button id="cookie-accept" class="cookie-btn cookie-accept">Přijmout vše</button>
-  </div>
-</div>
 
 <script>
   // NAV SCROLL + SCROLLSPY
@@ -961,25 +942,6 @@
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') lightboxNav(-1);
     if (e.key === 'ArrowRight') lightboxNav(1);
-  });
-
-  // COOKIES
-  const banner = document.getElementById('cookie-banner');
-  window.addEventListener('DOMContentLoaded', () => {
-    const c = localStorage.getItem('cookie-consent-nikola');
-    if (c !== 'accepted' && c !== 'rejected') setTimeout(() => banner.classList.add('show'), 1000);
-  });
-
-  document.getElementById('cookie-accept').addEventListener('click', () => {
-    localStorage.setItem('cookie-consent-nikola', 'accepted');
-    banner.classList.remove('show');
-    setTimeout(() => banner.style.display = 'none', 400);
-  });
-
-  document.getElementById('cookie-reject').addEventListener('click', () => {
-    localStorage.setItem('cookie-consent-nikola', 'rejected');
-    banner.classList.remove('show');
-    setTimeout(() => banner.style.display = 'none', 400);
   });
 
   // FORMULÁŘ
