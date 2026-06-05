@@ -1,4 +1,32 @@
 User-agent: *
 Allow: /
 
+# AI crawlers — povoleno indexování pro AI vyhledávače
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: SeznamBot
+Allow: /
+
 Sitemap: https://hubackovafoto.cz/sitemap.xml
