@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nikola Hubáčková | Fotografka Olomoucký kraj — Svatby, Rodiny, Ateliér</title>
+<title>Nikola Hubáčková | Fotografka Olomoucký kraj</title>
 <meta name="description" content="Nikola Hubáčková — fotografka z Olomouckého kraje. Fotím svatby, rodinné focení, těhotenské, zvířata a portréty v ateliéru v Unčovicích u Olomouce. Přirozený styl, rychlé dodání, bez omezení počtu snímků.">
 <meta name="keywords" content="fotografka Olomouc, svatební fotograf Olomoucký kraj, rodinné focení Olomouc, těhotenské focení, fotografka Unčovice, ateliérové focení Olomouc">
 <meta name="author" content="Nikola Hubáčková">
@@ -377,7 +377,7 @@
   /* FOOTER */
   footer { background: var(--dark); padding: 50px 0 28px; }
   .footer-inner { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 20px; }
-  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #faf8f4; text-decoration: none; }
+  .footer-logo { display: flex; align-items: center; gap: 12px; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #faf8f4; text-decoration: none; }
   .footer-logo em { font-style: italic; color: #8db88d; }
   .footer-links { display: flex; gap: 30px; list-style: none; }
   .footer-links a { color: rgba(250,248,244,0.72); text-decoration: none; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; }
@@ -424,7 +424,7 @@
     .process-icons-grid { grid-template-columns: 1fr; gap: 40px; }
     .process-icon-item + .process-icon-item::before { display: none; }
     .contact-section { grid-template-columns: 1fr; padding: 80px 0; }
-    .contact-img { height: 280px; }
+    .footer-links { display: none; }
     .container { padding: 0 24px; }
     .form-row { grid-template-columns: 1fr; }
     .gallery-header { flex-direction: column; align-items: flex-start; gap: 20px; }
@@ -843,7 +843,25 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <a href="#" class="footer-logo">Nikola <em>Hubáčková</em></a>
+      <a href="#" class="footer-logo">
+        <svg width="32" height="32" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <circle cx="19" cy="19" r="17" stroke="#8db88d" stroke-width="1.2" fill="none"/>
+          <circle cx="19" cy="19" r="11" stroke="#8db88d" stroke-width="1" fill="none" opacity="0.5"/>
+          <g transform="translate(19,19)">
+            <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#8db88d" opacity="0.85" transform="rotate(0)"/>
+            <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#8db88d" opacity="0.85" transform="rotate(60)"/>
+            <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#8db88d" opacity="0.85" transform="rotate(120)"/>
+            <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#8db88d" opacity="0.85" transform="rotate(180)"/>
+            <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#8db88d" opacity="0.85" transform="rotate(240)"/>
+            <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#8db88d" opacity="0.85" transform="rotate(300)"/>
+            <circle cx="0" cy="0" r="2.5" fill="#2a2018" stroke="#8db88d" stroke-width="0.8"/>
+          </g>
+        </svg>
+        <span style="display:flex; flex-direction:column; line-height:1.2;">
+          <span style="font-size:18px;">Nikola <em>Hubáčková</em></span>
+          <span style="font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:rgba(250,248,244,0.45); font-family:'Jost',sans-serif; font-weight:400;">Fotografka</span>
+        </span>
+      </a>
       <ul class="footer-links">
         <li><a href="#o-mne">O mně</a></li>
         <li><a href="#galerie">Galerie</a></li>
