@@ -1087,8 +1087,10 @@
   let scrollTicking = false;
   window.addEventListener('scroll', () => {
     if (!scrollTicking) {
+      // Přečíst scrollY okamžitě (před rAF), pak zapsat v rAF — read/write pattern
+      const scrolled = window.scrollY > 50;
       requestAnimationFrame(() => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
+        navbar.classList.toggle('scrolled', scrolled);
         scrollTicking = false;
       });
       scrollTicking = true;
