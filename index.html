@@ -504,6 +504,10 @@
   .reveal-left.visible { opacity: 1; transform: translateX(0); }
 
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
+  /* Na mobilu: hamburger viditelný, nav-links skryté — čistě CSS bez JS */
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+  }
   .hamburger span { width: 24px; height: 1.5px; background: var(--dark); transition: all 0.3s; display: block; }
   .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -581,7 +585,7 @@
       Instagram
     </a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Otevřít mobilní menu" aria-expanded="false" aria-controls="mobile-menu" style="display:none;">
+  <button class="hamburger" id="hamburger" aria-label="Otevřít mobilní menu" aria-expanded="false" aria-controls="mobile-menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -1047,10 +1051,7 @@
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
 
-  if (window.innerWidth <= 900) hamburger.style.display = 'flex';
-  window.addEventListener('resize', () => {
-    hamburger.style.display = window.innerWidth <= 900 ? 'flex' : 'none';
-  });
+  // Viditelnost hamburgeru řeší čistě CSS (@media), JS ji nepotřebuje měnit
 
   hamburger.addEventListener('click', () => {
     const isOpen = mobileMenu.classList.toggle('open');
