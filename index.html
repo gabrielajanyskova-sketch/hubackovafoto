@@ -226,12 +226,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
 <link rel="preload" as="image"
   href="images/foto-hero.webp"
   imagesrcset="images/foto-hero-mobile.webp 400w, images/foto-hero.webp 800w"
   imagesizes="(max-width: 900px) 100vw, 50vw"
   fetchpriority="high">
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" fetchpriority="low">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap"></noscript>
 
 <style>
@@ -253,7 +255,8 @@
   body {
     background: var(--cream);
     color: var(--text);
-    font-family: 'Jost', sans-serif;
+    /* Fallback dokud se nenačtou Google Fonts — redukuje LCP */
+    font-family: 'Jost', system-ui, -apple-system, sans-serif;
     font-weight: 300;
     overflow-x: hidden;
     line-height: 1.6;
@@ -625,6 +628,7 @@
       width="800" height="1067"
       alt="Párové focení v přírodě — přirozený moment, fotografka Nikola Hubáčková, Olomoucký kraj"
       loading="eager"
+      decoding="sync"
       fetchpriority="high">
   </div>
 </section>
