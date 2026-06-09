@@ -899,7 +899,7 @@
       <p>Ráda si o vašem focení popovídám. Odpovídám do 24 hodin.</p>
       <!-- FORMULÁŘ: přidány viditelné labely pro screen-readery (vizuálně skryté) -->
       <form id="contact-form" novalidate>
-        <input type="hidden" name="access_key" value="72528cfb-6a50-4788-a048-55124213dbb5">
+        <input type="hidden" name="access_key" value="TADY_VLOZ_WEB3FORMS_KEY">
         <input type="hidden" name="subject" value="Nová poptávka — hubackovafoto.cz">
         <input type="hidden" name="redirect" value="https://hubackovafoto.cz/dekujeme.html">
         <div class="form-row">
@@ -1218,10 +1218,7 @@
       });
       const data = await res.json();
       if (data.success) {
-        btn.innerHTML = '✓ Zpráva odeslána!';
-        btn.setAttribute('aria-live', 'polite');
-        form.reset();
-        setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; btn.removeAttribute('aria-busy'); }, 4000);
+        window.location.href = '/dekujeme.html';
       } else {
         throw new Error(data.message);
       }
