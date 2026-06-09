@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Děkuji za zprávu | Nikola Hubáčková Fotografka</title>
+<meta name="description" content="Zpráva byla úspěšně odeslána. Nikola Hubáčková vám odpoví do 24 hodin.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://hubackovafoto.cz/dekujeme.html" />
+
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" fetchpriority="low">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap"></noscript>
+
+<style>
+  :root {
+    --cream: #faf8f4;
+    --warm: #f2ede4;
+    --sand: #e8ddd0;
+    --stone: #c4b8a8;
+    --forest: #4a5e4a;
+    --forest-light: #6b8a6b;
+    --dark: #2a2018;
+    --text: #3a2e22;
+    --text-dim: #5a4a3a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Jost', system-ui, -apple-system, sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--forest);
+    outline-offset: 3px;
+  }
+
+  /* NAV */
+  nav {
+    padding: 24px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(196,184,168,0.2);
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .logo-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--dark); letter-spacing: 0.3px; }
+  .logo-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: #3a5a3a; font-weight: 500; }
+
+  /* HLAVNÍ OBSAH */
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+  }
+
+  .thank-you-wrap {
+    max-width: 620px;
+    text-align: center;
+  }
+
+  /* Animovaná ikona */
+  .check-circle {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 40px;
+    animation: popIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.6); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    animation: fadeUp 0.6s 0.15s ease both;
+  }
+  .eyebrow-line { width: 30px; height: 1px; background: var(--forest); }
+  .eyebrow-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #3a5a3a; font-weight: 500; }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 6vw, 68px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    color: var(--dark);
+    margin-bottom: 20px;
+    animation: fadeUp 0.6s 0.25s ease both;
+  }
+  h1 em { font-style: italic; color: var(--forest); }
+
+  .perex {
+    font-size: 17px;
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 50px;
+    animation: fadeUp 0.6s 0.35s ease both;
+  }
+
+  /* Co se děje dál */
+  .next-steps {
+    background: var(--warm);
+    border: 1px solid var(--sand);
+    padding: 36px 40px;
+    text-align: left;
+    margin-bottom: 48px;
+    animation: fadeUp 0.6s 0.45s ease both;
+  }
+
+  .next-steps-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--forest);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .next-steps ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .next-steps li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 15px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--forest);
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: -2px;
+  }
+
+  /* Tlačítka */
+  .btn-wrap {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.55s ease both;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--forest);
+    color: white;
+    padding: 16px 36px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    font-family: 'Jost', sans-serif;
+  }
+  .btn-primary:hover { background: var(--dark); gap: 18px; }
+  .btn-primary svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--text-dim);
+    padding: 16px 28px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid var(--sand);
+    transition: all 0.3s;
+    font-family: 'Jost', sans-serif;
+  }
+  .btn-ghost:hover { border-color: var(--forest); color: var(--forest); }
+  .btn-ghost svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    padding: 28px 60px;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: rgba(250,248,244,0.52);
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-bottom a { color: #8db88d; text-decoration: none; }
+
+  @media (max-width: 600px) {
+    nav { padding: 18px 24px; }
+    footer { padding: 24px; }
+    .next-steps { padding: 28px 24px; }
+    .btn-wrap { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Navigace">
+  <a href="/" class="nav-logo" aria-label="Nikola Hubáčková — Fotografka, zpět na hlavní stránku">
+    <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="19" cy="19" r="17" stroke="#4a5e4a" stroke-width="1.2" fill="none"/>
+      <circle cx="19" cy="19" r="11" stroke="#4a5e4a" stroke-width="1" fill="none" opacity="0.5"/>
+      <g transform="translate(19,19)">
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(0)"/>
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(60)"/>
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(120)"/>
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(180)"/>
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(240)"/>
+        <path d="M0,-7 Q3.5,-5 3.5,0 Q3.5,2 1,3 Q-1,4 -3,2 L-1,-6 Z" fill="#4a5e4a" opacity="0.85" transform="rotate(300)"/>
+        <circle cx="0" cy="0" r="2.5" fill="#faf8f4" stroke="#4a5e4a" stroke-width="0.8"/>
+      </g>
+    </svg>
+    <div class="logo-text">
+      <span class="logo-name">Nikola Hubáčková</span>
+      <span class="logo-title">Fotografka</span>
+    </div>
+  </a>
+</nav>
+
+<main>
+  <div class="thank-you-wrap">
+
+    <!-- Animovaná ikona -->
+    <svg class="check-circle" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="44" cy="44" r="43" stroke="#4a5e4a" stroke-width="1.2"/>
+      <circle cx="44" cy="44" r="36" stroke="#4a5e4a" stroke-width="0.8" opacity="0.3"/>
+      <polyline points="28,44 40,56 62,32" stroke="#4a5e4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        stroke-dasharray="48" stroke-dashoffset="48">
+        <animate attributeName="stroke-dashoffset" from="48" to="0" dur="0.5s" begin="0.3s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 1 0.3 1"/>
+      </polyline>
+    </svg>
+
+    <div class="eyebrow" aria-hidden="true">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Zpráva odeslána</span>
+      <div class="eyebrow-line"></div>
+    </div>
+
+    <h1>Děkuji,<br><em>ozvu se brzy!</em></h1>
+
+    <p class="perex">Vaše zpráva dorazila a já se na ni těším. Odpovídám do 24 hodin — obvykle ale mnohem dřív.</p>
+
+    <div class="next-steps" role="region" aria-label="Co se stane dál">
+      <div class="next-steps-title">Co se stane dál</div>
+      <ul>
+        <li>
+          <span class="step-num">1</span>
+          <span>Přečtu vaši zprávu a zamyslím se nad tím, co by se vám nejvíc hodilo.</span>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <span>Ozvu se vám e-mailem nebo telefonem — domluvíme termín a všechny detaily.</span>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <span>A pak už se jen těšíme na focení!</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="btn-wrap">
+      <a href="/" class="btn-primary">
+        Zpět na web
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="https://www.instagram.com/hubackova.photo/" target="_blank" rel="noopener noreferrer" class="btn-ghost" aria-label="Sledujte Nikolu na Instagramu (otevře se v novém okně)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        Instagram
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 Nikola Hubáčková · Unčovice 69, 784 01 Litovel</span>
+    <span>Web: <a href="https://janyskovadigital.cz" rel="noopener noreferrer">Janyskova Digital</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
