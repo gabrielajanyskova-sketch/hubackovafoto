@@ -3,9 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nikola Hubáčková | Fotografka Olomoucký kraj</title>
-<meta name="description" content="Nikola Hubáčková — fotografka z Olomouckého kraje. Fotím svatby, rodinné focení, těhotenské, zvířata a portréty v ateliéru v Unčovicích u Olomouce. Přirozený styl, rychlé dodání, bez omezení počtu snímků.">
-<meta name="keywords" content="fotografka Olomouc, svatební fotograf Olomoucký kraj, rodinné focení Olomouc, těhotenské focení, fotografka Unčovice, ateliérové focení Olomouc">
+
+<!-- ════════════════════════════════════════════════════
+     TITLE: klíčová slova na prvním místě, lokalita explicitní
+     ════════════════════════════════════════════════════ -->
+<title>Fotografka Olomouc & Olomoucký kraj | Nikola Hubáčková</title>
+
+<!-- ════════════════════════════════════════════════════
+     META DESCRIPTION: do 160 znaků, lokální + CTA
+     ════════════════════════════════════════════════════ -->
+<meta name="description" content="Nikola Hubáčková — fotografka z Unčovic u Olomouce. Svatby, rodinné focení, těhotenské a zvířata. Vlastní ateliér, výjezdy po celé ČR. Ceny od 500 Kč.">
+<meta name="keywords" content="fotografka Olomouc, svatební fotograf Olomoucký kraj, rodinné focení Olomouc, těhotenské focení, fotografka Unčovice, ateliérové focení Olomouc, fotografka Litovel">
 <meta name="author" content="Nikola Hubáčková">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#4a5e4a">
@@ -13,7 +21,7 @@
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hubackovafoto.cz/">
-<meta property="og:title" content="Nikola Hubáčková | Fotografka Olomoucký kraj">
+<meta property="og:title" content="Fotografka Olomouc | Nikola Hubáčková — Svatby, Rodiny, Portréty">
 <meta property="og:description" content="Fotím přirozeně, uvolněně a bez stresu. Svatby, rodinné focení, těhotenské, zvířata — ateliér v Unčovicích u Olomouce. Výjezdy po celé ČR.">
 <meta property="og:image" content="https://hubackovafoto.cz/images/foto-hero.webp">
 <meta property="og:image:width" content="1200">
@@ -24,21 +32,27 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nikola Hubáčková | Fotografka Olomoucký kraj">
+<meta name="twitter:title" content="Fotografka Olomouc | Nikola Hubáčková">
 <meta name="twitter:description" content="Fotím přirozeně, uvolněně a bez stresu. Svatby, rodinné focení, těhotenské, zvířata — ateliér v Unčovicích u Olomouce.">
 <meta name="twitter:image" content="https://hubackovafoto.cz/images/foto-hero.webp">
 
+<!-- ════════════════════════════════════════════════════
+     CANONICAL — ochrana proti duplicitám www/http
+     ════════════════════════════════════════════════════ -->
 <link rel="canonical" href="https://hubackovafoto.cz/" />
 
-<!-- Schema.org — Person + LocalBusiness + FAQPage -->
+<!-- ════════════════════════════════════════════════════
+     SCHEMA.ORG — LocalBusiness + Person + FAQPage + WebSite
+     Kompletní a rozšířené pro GEO + AEO
+     ════════════════════════════════════════════════════ -->
 <script type="application/ld+json">
 [
   {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ProfessionalService"],
     "@id": "https://hubackovafoto.cz/#business",
-    "name": "Nikola Hubáčková — Fotografka",
-    "description": "Profesionální fotografka z Olomouckého kraje. Specializace na svatební fotografie, rodinné focení, těhotenské focení, zvířata a ateliérové portréty. Vlastní ateliér v Unčovicích u Olomouce. Výjezdy po celé ČR.",
+    "name": "Nikola Hubáčková — Fotografka Olomouc",
+    "description": "Profesionální fotografka z Olomouckého kraje. Specializace: svatební fotografie, rodinné focení, těhotenské focení, focení zvířat a ateliérové portréty. Vlastní ateliér v Unčovicích u Olomouce. Výjezdy po celé ČR. Ceny od 500 Kč.",
     "url": "https://hubackovafoto.cz",
     "telephone": "+420739486263",
     "email": "nikola@hubackovafoto.cz",
@@ -61,16 +75,51 @@
       "longitude": "17.0731"
     },
     "areaServed": [
+      {"@type": "City", "name": "Olomouc"},
+      {"@type": "City", "name": "Litovel"},
+      {"@type": "City", "name": "Prostějov"},
+      {"@type": "City", "name": "Přerov"},
+      {"@type": "City", "name": "Šumperk"},
       {"@type": "State", "name": "Olomoucký kraj"},
       {"@type": "Country", "name": "Česká republika"}
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Fotografické služby",
+      "name": "Fotografické služby Olomouc",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vánoční a sezónní focení"}, "price": "500", "priceCurrency": "CZK"},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rodinné a párové focení"}, "price": "800", "priceCurrency": "CZK"},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Svatební fotografie"}, "price": "4000", "priceCurrency": "CZK"}
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Vánoční a sezónní focení Olomouc",
+            "description": "Tematické portréty v ateliéru nebo přírodě. Dodání do 1 týdne, min. 15 upravených snímků."
+          },
+          "price": "500",
+          "priceCurrency": "CZK",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Rodinné a párové focení Olomouc",
+            "description": "Focení rodin, párů, těhotných maminek a mazlíčků. Venku i v ateliéru. Min. 30 upravených snímků, dodání do 2 týdnů."
+          },
+          "price": "800",
+          "priceCurrency": "CZK",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Svatební fotografie Olomoucký kraj",
+            "description": "Celý svatební den nebo jeho část. Min. 200 upravených snímků, výjezdy po celé ČR. Dodání do 2 týdnů."
+          },
+          "price": "4000",
+          "priceCurrency": "CZK",
+          "availability": "https://schema.org/InStock"
+        }
       ]
     },
     "sameAs": [
@@ -81,6 +130,9 @@
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "08:00",
       "closes": "20:00"
+    },
+    "founder": {
+      "@id": "https://hubackovafoto.cz/#person"
     }
   },
   {
@@ -89,6 +141,7 @@
     "@id": "https://hubackovafoto.cz/#person",
     "name": "Nikola Hubáčková",
     "jobTitle": "Fotografka",
+    "description": "25letá profesionální fotografka z Olomouckého kraje. Specializuje se na přirozené zachycování emocí — svatby, rodiny, těhotenství a portréty. Využívá fotoaparát Nikon Z5 II.",
     "url": "https://hubackovafoto.cz",
     "image": "https://hubackovafoto.cz/images/foto-o-mne.webp",
     "telephone": "+420739486263",
@@ -100,7 +153,8 @@
       "addressCountry": "CZ"
     },
     "sameAs": ["https://www.instagram.com/hubackova.photo/"],
-    "worksFor": {"@id": "https://hubackovafoto.cz/#business"}
+    "worksFor": {"@id": "https://hubackovafoto.cz/#business"},
+    "knowsAbout": ["Svatební fotografie", "Rodinné focení", "Těhotenské focení", "Portrétní fotografie", "Focení zvířat", "Ateliérové focení"]
   },
   {
     "@context": "https://schema.org",
@@ -108,33 +162,38 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Kde fotografujete?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Fotím v Olomouckém kraji a okolí. Mám vlastní malý ateliér v Unčovicích u Olomouce. Na přání vyjedu kamkoliv po celé České republice."}
+        "name": "Kde fotografuje Nikola Hubáčková?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Nikola Hubáčková fotí v Olomouckém kraji a okolí — zejména v Olomouci, Litoveli, Prostějově a okolních obcích. Má vlastní malý ateliér v Unčovicích u Olomouce (Unčovice 69, 784 01). Na přání vyjede kamkoliv po celé České republice."}
       },
       {
         "@type": "Question",
-        "name": "Jak rychle dostanu fotky?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Upravené snímky dostanete do 1–2 týdnů od focení. Snažím se dodat co nejdříve, aby vzpomínky byly čerstvé."}
+        "name": "Jak rychle dostanu fotky od fotografky v Olomouci?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Upravené snímky dostanete do 1–2 týdnů od focení. U sezónního focení dodání do 1 týdne. Snaží se dodat co nejdříve, aby vzpomínky byly čerstvé."}
       },
       {
         "@type": "Question",
-        "name": "Kolik snímků dostanu?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Počet snímků není omezen. U rodinného focení dostanete minimálně 30 upravených fotografií, u svateb 200 a více."}
+        "name": "Kolik snímků dostanu při focení?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Počet snímků není omezen. U rodinného focení dostanete minimálně 30 upravených fotografií, u svateb 200 a více, u sezónního focení minimálně 15 snímků."}
       },
       {
         "@type": "Question",
-        "name": "Kolik stojí focení?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Ceny začínají od 500 Kč za vánoční a sezónní focení, od 800 Kč za rodinné nebo párové focení a od 4 000 Kč za svatební fotografie. Ceny jsou orientační a připravím vám nabídku na míru."}
+        "name": "Kolik stojí fotografka v Olomouci?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ceny fotografky Nikoly Hubáčkové začínají od 500 Kč za vánoční a sezónní focení, od 800 Kč za rodinné nebo párové focení a od 4 000 Kč za svatební fotografie v Olomouckém kraji. Ceny jsou orientační — připraví nabídku na míru."}
       },
       {
         "@type": "Question",
-        "name": "Fotíte i venku?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Ano, fotím venku i v ateliéru. Venkovní focení v přírodě nebo ve městě je velmi oblíbené — výsledky jsou přirozené a plné emocí."}
+        "name": "Fotí fotografka Hubáčková i venku v přírodě?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ano, fotí venku i v ateliéru v Unčovicích u Olomouce. Venkovní focení v přírodě nebo ve městě je velmi oblíbené — výsledky jsou přirozené a plné emocí."}
       },
       {
         "@type": "Question",
-        "name": "Fotíte svatby?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Ano, svatební fotografie jsou jednou z mých specialit. Mohu nafotit celý svatební den nebo jen jeho část — obřad, hostinu nebo portrétní focení páru. Vyjedu po celé ČR."}
+        "name": "Fotí Nikola Hubáčková svatby v Olomouckém kraji?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ano, svatební fotografie jsou jednou ze specialit Nikoly Hubáčkové. Může nafotit celý svatební den nebo jen jeho část — obřad, hostinu nebo portrétní focení páru. Vyjede po celé ČR, základna je v Olomouckém kraji."}
+      },
+      {
+        "@type": "Question",
+        "name": "Fotí fotografka v Olomouci i zvířata a mazlíčky?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ano, focení zvířat a mazlíčků je součástí nabídky. Focení probíhá venku i v ateliéru v Unčovicích u Olomouce."}
       }
     ]
   },
@@ -143,10 +202,18 @@
     "@type": "WebSite",
     "@id": "https://hubackovafoto.cz/#website",
     "url": "https://hubackovafoto.cz",
-    "name": "Nikola Hubáčková Fotografka",
-    "description": "Profesionální fotografka Olomoucký kraj — svatby, rodiny, těhotenské, ateliér",
+    "name": "Nikola Hubáčková — Fotografka Olomouc",
+    "description": "Profesionální fotografka Olomoucký kraj — svatby, rodiny, těhotenské, ateliér v Unčovicích u Olomouce",
     "inLanguage": "cs",
-    "publisher": {"@id": "https://hubackovafoto.cz/#business"}
+    "publisher": {"@id": "https://hubackovafoto.cz/#business"},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://hubackovafoto.cz/?s={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   }
 ]
 </script>
@@ -177,7 +244,7 @@
     --forest-light: #6b8a6b;
     --dark: #2a2018;
     --text: #3a2e22;
-    --text-dim: #6b5a4a;
+    --text-dim: #5a4a3a; /* OPRAVENO: zvýšen kontrast z #6b5a4a na #5a4a3a */
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -190,6 +257,29 @@
     font-weight: 300;
     overflow-x: hidden;
     line-height: 1.6;
+  }
+
+  /* ════════════════════════════════
+     PŘÍSTUPNOST: viditelný focus
+     ════════════════════════════════ */
+  :focus-visible {
+    outline: 2px solid var(--forest);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ════════════════════════════════
+     PŘÍSTUPNOST: redukce pohybu
+     ════════════════════════════════ */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .marquee-track { animation: none; }
+    .hero-right img { transition: none; }
   }
 
   /* NAV */
@@ -235,8 +325,20 @@
   .eyebrow-line { width: 40px; height: 1px; background: var(--forest); }
   .eyebrow-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--forest); font-weight: 400; }
 
-  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 6vw, 88px); font-weight: 300; line-height: 1.05; letter-spacing: -1px; color: var(--dark); margin-bottom: 25px; }
-  .hero h1 em { font-style: italic; color: var(--forest); }
+  /* ════════════════════════════════
+     H1: přidána viditelná H1 pro SEO + zachován vizuální heading
+     ════════════════════════════════ */
+  .hero-seo-h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: var(--forest);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .hero h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 6vw, 88px); font-weight: 300; line-height: 1.05; letter-spacing: -1px; color: var(--dark); margin-bottom: 25px; }
+  .hero h2 em { font-style: italic; color: var(--forest); }
   .hero-sub { font-size: 17px; color: var(--text-dim); max-width: 400px; line-height: 1.8; margin-bottom: 45px; font-weight: 300; }
 
   .btn-primary { display: inline-flex; align-items: center; gap: 12px; background: var(--forest); color: white; padding: 16px 36px; text-decoration: none; font-size: 13px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; transition: all 0.4s; border: none; cursor: pointer; font-family: 'Jost', sans-serif; }
@@ -326,18 +428,18 @@
   .price-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; color: var(--dark); margin-bottom: 8px; }
   .price-card.featured h3 { color: white; }
   .price-card > p { font-size: 14px; color: var(--text-dim); margin-bottom: 25px; font-weight: 300; line-height: 1.6; }
-  .price-card.featured > p { color: rgba(255,255,255,0.7); }
+  .price-card.featured > p { color: rgba(255,255,255,0.85); /* OPRAVENO: zvýšen kontrast */ }
   .price-amount { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; color: var(--dark); line-height: 1; margin-bottom: 30px; letter-spacing: -1px; }
   .price-amount span { font-size: 18px; color: var(--text-dim); letter-spacing: 0; }
   .price-card.featured .price-amount { color: white; }
-  .price-card.featured .price-amount span { color: rgba(255,255,255,0.5); }
+  .price-card.featured .price-amount span { color: rgba(255,255,255,0.65); /* OPRAVENO */ }
   .price-divider { height: 1px; background: var(--sand); margin-bottom: 25px; }
   .price-card.featured .price-divider { background: rgba(255,255,255,0.15); }
   .price-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .price-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-dim); font-weight: 300; }
-  .price-card.featured .price-features li { color: rgba(255,255,255,0.8); }
+  .price-card.featured .price-features li { color: rgba(255,255,255,0.9); /* OPRAVENO: zvýšen kontrast */ }
   .price-features li svg { width: 14px; height: 14px; stroke: var(--forest); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-  .price-card.featured .price-features li svg { stroke: rgba(255,255,255,0.8); }
+  .price-card.featured .price-features li svg { stroke: rgba(255,255,255,0.9); }
   .pricing-note { text-align: center; font-size: 18px; color: var(--text-dim); margin-top: 30px; font-style: italic; font-family: 'Cormorant Garamond', serif; }
 
   /* PROCESS */
@@ -352,7 +454,7 @@
   .process-icon-item:hover .process-icon-circle { border-color: var(--forest-light); background: rgba(74,94,74,0.15); }
   .process-icon-circle svg { width: 22px; height: 22px; stroke: var(--forest-light); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
   .process-icon-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: #faf8f4; margin-bottom: 14px; }
-  .process-icon-item p { font-size: 15px; color: rgba(250,248,244,0.55); line-height: 1.75; font-weight: 300; }
+  .process-icon-item p { font-size: 15px; color: rgba(250,248,244,0.7); /* OPRAVENO: zvýšen kontrast z 0.55 */ line-height: 1.75; font-weight: 300; }
 
   /* CONTACT */
   .contact-section { padding: 130px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -367,12 +469,19 @@
   .form-group input, .form-group textarea { width: 100%; padding: 15px 0; background: transparent; border: none; border-bottom: 1px solid var(--sand); color: var(--text); font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 300; transition: border-color 0.3s; outline: none; }
   .form-group input::placeholder, .form-group textarea::placeholder { color: var(--stone); font-size: 14px; letter-spacing: 0.5px; }
   .form-group input:focus, .form-group textarea:focus { border-bottom-color: var(--forest); }
+  /* PŘÍSTUPNOST: label pro screen-readery */
+  .form-group label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+  .form-group { position: relative; }
   .form-group textarea { resize: none; height: 100px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .contact-info { margin-top: 35px; padding-top: 30px; border-top: 1px solid var(--sand); display: flex; flex-direction: column; gap: 12px; }
   .contact-info-item { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); text-decoration: none; transition: color 0.3s; }
   .contact-info-item:hover { color: var(--forest); }
   .contact-info-item svg { width: 15px; height: 15px; stroke: var(--forest); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+  /* MAPA */
+  .map-section { padding: 0 0 80px; }
+  .map-embed { width: 100%; height: 260px; border: 1px solid var(--sand); filter: saturate(0.6) brightness(1.02); border-radius: 2px; }
 
   /* FOOTER */
   footer { background: var(--dark); padding: 50px 0 28px; }
@@ -384,7 +493,6 @@
   .footer-links a:hover { color: #8db88d; }
   .footer-bottom { border-top: 1px solid rgba(250,248,244,0.1); padding-top: 22px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(250,248,244,0.52); flex-wrap: wrap; gap: 10px; }
   .footer-bottom a { color: #8db88d; text-decoration: none; }
-
 
   /* REVEAL */
   .reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.9s ease, transform 0.9s ease; }
@@ -432,11 +540,14 @@
 </style>
 </head>
 <body>
+<!-- ════════════════════════════════
+     PŘÍSTUPNOST: skip to content
+     ════════════════════════════════ -->
 <a href="#main-content" style="position:absolute;left:-9999px;top:0;background:var(--forest);color:white;padding:8px 16px;z-index:99999;font-size:14px;" onfocus="this.style.left='0'">Přeskočit na obsah</a>
 
-<nav id="navbar">
-  <a href="#" class="nav-logo">
-    <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<nav id="navbar" role="navigation" aria-label="Hlavní navigace">
+  <a href="#" class="nav-logo" aria-label="Nikola Hubáčková — Fotografka, zpět na začátek">
+    <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <circle cx="19" cy="19" r="17" stroke="#4a5e4a" stroke-width="1.2" fill="none"/>
       <circle cx="19" cy="19" r="11" stroke="#4a5e4a" stroke-width="1" fill="none" opacity="0.5"/>
       <g transform="translate(19,19)">
@@ -454,7 +565,7 @@
       <span class="logo-title">Fotografka</span>
     </div>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" role="list">
     <li><a href="#o-mne" data-section="o-mne">O mně</a></li>
     <li><a href="#galerie" data-section="galerie">Galerie</a></li>
     <li><a href="#sluzby" data-section="sluzby">Služby</a></li>
@@ -462,25 +573,25 @@
     <li><a href="#kontakt" data-section="kontakt">Kontakt</a></li>
   </ul>
   <div class="nav-ig">
-    <a href="https://www.instagram.com/hubackova.photo/" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+    <a href="https://www.instagram.com/hubackova.photo/" target="_blank" rel="noopener noreferrer" aria-label="Sledujte Nikolu Hubáčkovou na Instagramu (otevře se v novém okně)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
       Instagram
     </a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Otevřít menu" style="display:none;">
+  <button class="hamburger" id="hamburger" aria-label="Otevřít mobilní menu" aria-expanded="false" aria-controls="mobile-menu" style="display:none;">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- MOBILNÍ MENU -->
-<div class="mobile-menu" id="mobile-menu">
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobilní navigace" aria-hidden="true">
   <a href="#o-mne" onclick="closeMenu()">O mně</a>
   <a href="#galerie" onclick="closeMenu()">Galerie</a>
   <a href="#sluzby" onclick="closeMenu()">Služby</a>
   <a href="#cenik" onclick="closeMenu()">Ceník</a>
   <a href="#kontakt" onclick="closeMenu()">Kontakt</a>
-  <a href="https://www.instagram.com/hubackova.photo/" target="_blank" rel="noopener" class="mobile-menu-ig">
-    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+  <a href="https://www.instagram.com/hubackova.photo/" target="_blank" rel="noopener noreferrer" class="mobile-menu-ig" aria-label="Sledujte mě na Instagramu (otevře se v novém okně)">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
     Instagram
   </a>
 </div>
@@ -488,17 +599,22 @@
 <main id="main-content" aria-label="Obsah stránky">
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-labelledby="hero-heading">
   <div class="hero-left">
-    <div class="hero-eyebrow">
+    <div class="hero-eyebrow" aria-hidden="true">
       <div class="eyebrow-line"></div>
       <span class="eyebrow-text">Fotografka · Olomoucký kraj</span>
     </div>
-    <h1>Vytvářejme<br>si vzpomínky<br>na <em>celý život</em></h1>
+    <!-- ════════════════════════════════
+         H1 — SEO klíčová slova + lokalita
+         Vizuální dojem zachován pomocí h2
+         ════════════════════════════════ -->
+    <h1 class="hero-seo-h1">Fotografka Olomouc &amp; Olomoucký kraj — Nikola Hubáčková</h1>
+    <h2 id="hero-heading">Vytvářejme<br>si vzpomínky<br>na <em>celý život</em></h2>
     <p class="hero-sub">Fotím přirozeně, uvolněně a bez stresu. Nejkrásnější záběry vznikají, když jste sami sebou.</p>
     <a href="#kontakt" class="btn-primary">
       Chci se objednat
-      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
   </div>
   <div class="hero-right">
@@ -506,21 +622,22 @@
       src="images/foto-hero.webp"
       srcset="images/foto-hero-mobile.webp 400w, images/foto-hero.webp 800w"
       sizes="(max-width: 900px) 100vw, 50vw"
-      alt="Párové focení — přirozený moment"
+      width="800" height="1067"
+      alt="Párové focení v přírodě — přirozený moment, fotografka Nikola Hubáčková, Olomoucký kraj"
       loading="eager"
       fetchpriority="high">
   </div>
 </section>
 
 <!-- MARQUEE -->
-<div class="marquee-section" aria-hidden="true">
+<div class="marquee-section" aria-hidden="true" role="presentation">
   <div class="marquee-track">
     <span class="marquee-item">Svatby</span>
     <span class="marquee-item">Rodinné focení</span>
     <span class="marquee-item">Těhotenské</span>
     <span class="marquee-item">Zvířata</span>
     <span class="marquee-item">Vánoční portréty</span>
-    <span class="marquee-item">Ateliér</span>
+    <span class="marquee-item">Ateliér Unčovice</span>
     <span class="marquee-item">Olomoucký kraj</span>
     <span class="marquee-item">Přirozené momentky</span>
     <span class="marquee-item">Svatby</span>
@@ -528,7 +645,7 @@
     <span class="marquee-item">Těhotenské</span>
     <span class="marquee-item">Zvířata</span>
     <span class="marquee-item">Vánoční portréty</span>
-    <span class="marquee-item">Ateliér</span>
+    <span class="marquee-item">Ateliér Unčovice</span>
     <span class="marquee-item">Olomoucký kraj</span>
     <span class="marquee-item">Přirozené momentky</span>
   </div>
@@ -537,26 +654,29 @@
 <div class="container">
 
   <!-- O MNĚ -->
-  <section class="about-section" id="o-mne">
+  <section class="about-section" id="o-mne" aria-labelledby="o-mne-heading">
     <div class="about-visual reveal-left">
       <img class="about-img-main"
         src="images/foto-o-mne.webp"
         sizes="(max-width: 900px) 100vw, 42vw"
         width="800" height="826"
-        alt="Nikola Hubáčková fotografka při focení">
-      <div class="about-tag-float">Fotografka</div>
+        alt="Nikola Hubáčková — fotografka z Olomouckého kraje při práci s fotoaparátem Nikon Z5 II"
+        loading="lazy"
+        decoding="async">
+      <div class="about-tag-float" aria-hidden="true">Fotografka</div>
     </div>
     <div class="about-text reveal">
       <div class="section-tag">O mně</div>
-      <h2 class="section-title" style="margin-bottom:25px;">Jsem Nikča,<br><em>fotografka emocí.</em></h2>
-      <p>Jsem 25letá fotografka z Olomouckého kraje, která miluje zachycování přirozených momentů. Využívám profesionální fotoaparát <strong>Nikon Z5 II</strong>.</p>
-      <p>Zaměřuji se na svatby, rodiny, těhotenské focení, zvířata i nové výzvy. Focení se mnou je <strong>pohodové a přirozené</strong> — nemusíte se bát strnulého pózování.</p>
+      <h2 class="section-title" id="o-mne-heading" style="margin-bottom:25px;">Jsem Nikča,<br><em>fotografka emocí.</em></h2>
+      <!-- AEO: přidána explicitní entitní věta pro AI vyhledávání -->
+      <p>Jsem <strong>Nikola Hubáčková</strong>, 25letá profesionální fotografka z <strong>Olomouckého kraje</strong> se sídlem v Unčovicích u Olomouce. Miluji zachycování přirozených momentů a využívám profesionální fotoaparát <strong>Nikon Z5 II</strong>.</p>
+      <p>Zaměřuji se na <strong>svatby v Olomouckém kraji</strong>, rodinné focení, těhotenské focení, zvířata i nové výzvy. Focení se mnou je <strong>pohodové a přirozené</strong> — nemusíte se bát strnulého pózování.</p>
       <p>Výsledné snímky dostanete rychle a <strong>bez omezení počtu</strong>.</p>
       <ul class="about-list">
         <li>Venkovní i ateliérové focení</li>
-        <li>Vlastní malý ateliér pro focení v interiéru</li>
-        <li>Olomoucký kraj a okolí</li>
-        <li>Rychlé dodání upravených snímků</li>
+        <li>Vlastní ateliér v Unčovicích u Olomouce</li>
+        <li>Olomouc, Litovel, Prostějov a okolí</li>
+        <li>Rychlé dodání — do 1–2 týdnů</li>
         <li>Přirozený a uvolněný přístup</li>
       </ul>
     </div>
@@ -565,62 +685,62 @@
 </div>
 
 <!-- GALERIE -->
-<section class="gallery-section" id="galerie">
+<section class="gallery-section" id="galerie" aria-labelledby="galerie-heading">
   <div class="container">
     <div class="gallery-header reveal">
       <div>
         <div class="section-tag">Galerie</div>
-        <div class="section-title" style="margin-bottom:0;">Pohled do<br><em>mé práce</em></div>
+        <div class="section-title" id="galerie-heading" style="margin-bottom:0;">Pohled do<br><em>mé práce</em></div>
       </div>
       <a href="#kontakt" class="btn-primary">
         Chci nafotit
-        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
-    <div class="slideshow-wrap">
+    <div class="slideshow-wrap" role="region" aria-label="Ukázky fotografií — galerie">
       <div class="slideshow-track-outer">
         <div class="slideshow-track" id="slideshow-track">
-          <div class="slide" onclick="openLightbox(0)">
-            <img src="images/foto-01.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Svatební fotografie — závoj" loading="lazy" decoding="async">
-            <div class="slide-label">Svatby</div>
+          <div class="slide" onclick="openLightbox(0)" role="button" tabindex="0" aria-label="Otevřít fotografii: Svatební závoj — přírodní světlo">
+            <img src="images/foto-01.webp" sizes="(max-width: 900px) 100vw, 33vw" width="600" height="400" alt="Svatební fotografie — nevěsta se závojem v přírodním světle, Olomoucký kraj" loading="lazy" decoding="async">
+            <div class="slide-label" aria-hidden="true">Svatby</div>
           </div>
-          <div class="slide" onclick="openLightbox(1)">
-            <img src="images/foto-02.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Párové focení — příroda" loading="lazy" decoding="async">
-            <div class="slide-label">Párové focení</div>
+          <div class="slide" onclick="openLightbox(1)" role="button" tabindex="0" aria-label="Otevřít fotografii: Párové focení v přírodě">
+            <img src="images/foto-02.webp" sizes="(max-width: 900px) 100vw, 33vw" width="600" height="400" alt="Párové focení v přírodě — přirozené objetí, Olomoucký kraj" loading="lazy" decoding="async">
+            <div class="slide-label" aria-hidden="true">Párové focení</div>
           </div>
-          <div class="slide" onclick="openLightbox(2)">
-            <img src="images/foto-03.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Dětské focení — miminko" loading="lazy" decoding="async">
-            <div class="slide-label">Dětské focení</div>
+          <div class="slide" onclick="openLightbox(2)" role="button" tabindex="0" aria-label="Otevřít fotografii: Dětské focení — novorozenec">
+            <img src="images/foto-03.webp" sizes="(max-width: 900px) 100vw, 33vw" width="600" height="400" alt="Dětské focení — novorozenec v ateliéru Unčovice u Olomouce" loading="lazy" decoding="async">
+            <div class="slide-label" aria-hidden="true">Dětské focení</div>
           </div>
-          <div class="slide" onclick="openLightbox(3)">
-            <img src="images/foto-04.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Těhotenské focení" loading="lazy" decoding="async">
-            <div class="slide-label">Těhotenské</div>
+          <div class="slide" onclick="openLightbox(3)" role="button" tabindex="0" aria-label="Otevřít fotografii: Těhotenské focení">
+            <img src="images/foto-04.webp" sizes="(max-width: 900px) 100vw, 33vw" width="600" height="400" alt="Těhotenské focení — maminka čekající miminko, venkovní focení Olomouc" loading="lazy" decoding="async">
+            <div class="slide-label" aria-hidden="true">Těhotenské</div>
           </div>
-          <div class="slide" onclick="openLightbox(4)">
-            <img src="images/foto-05.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Svatební detail — dort" loading="lazy" decoding="async">
-            <div class="slide-label">Svatební detaily</div>
+          <div class="slide" onclick="openLightbox(4)" role="button" tabindex="0" aria-label="Otevřít fotografii: Svatební detail — dort">
+            <img src="images/foto-05.webp" sizes="(max-width: 900px) 100vw, 33vw" width="600" height="400" alt="Svatební detail — ozdobný dort, svatební fotografie Olomoucký kraj" loading="lazy" decoding="async">
+            <div class="slide-label" aria-hidden="true">Svatební detaily</div>
           </div>
-          <div class="slide" onclick="openLightbox(5)">
-            <img src="images/foto-06.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Focení zvířat — pes" loading="lazy" decoding="async">
-            <div class="slide-label">Zvířata</div>
+          <div class="slide" onclick="openLightbox(5)" role="button" tabindex="0" aria-label="Otevřít fotografii: Focení zvířat — pes">
+            <img src="images/foto-06.webp" sizes="(max-width: 900px) 100vw, 33vw" width="600" height="400" alt="Focení zvířat — portrét psa venku, fotografka Olomouc" loading="lazy" decoding="async">
+            <div class="slide-label" aria-hidden="true">Zvířata</div>
           </div>
-          <div class="slide" onclick="openLightbox(6)">
-            <img src="images/foto-07.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Rodinné focení — most" loading="lazy" decoding="async">
-            <div class="slide-label">Rodinné focení</div>
+          <div class="slide" onclick="openLightbox(6)" role="button" tabindex="0" aria-label="Otevřít fotografii: Rodinné focení na mostě">
+            <img src="images/foto-07.webp" sizes="(max-width: 900px) 100vw, 33vw" width="600" height="400" alt="Rodinné focení na mostě — přirozené okamžiky, Olomoucký kraj" loading="lazy" decoding="async">
+            <div class="slide-label" aria-hidden="true">Rodinné focení</div>
           </div>
-          <div class="slide" onclick="openLightbox(7)">
-            <img src="images/foto-08.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Svatební fotografie — západ slunce" loading="lazy" decoding="async">
-            <div class="slide-label">Svatby</div>
+          <div class="slide" onclick="openLightbox(7)" role="button" tabindex="0" aria-label="Otevřít fotografii: Svatební foto při západu slunce">
+            <img src="images/foto-08.webp" sizes="(max-width: 900px) 100vw, 33vw" width="600" height="400" alt="Svatební fotografie při zlaté hodině — západ slunce, Olomoucký kraj" loading="lazy" decoding="async">
+            <div class="slide-label" aria-hidden="true">Svatby</div>
           </div>
         </div>
       </div>
       <div class="slideshow-controls">
         <button class="slide-btn" id="slide-prev" aria-label="Předchozí fotografie">
-          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
-        <div class="slide-dots" id="slide-dots"></div>
+        <div class="slide-dots" id="slide-dots" role="tablist" aria-label="Navigace galerií"></div>
         <button class="slide-btn" id="slide-next" aria-label="Další fotografie">
-          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
       </div>
     </div>
@@ -629,44 +749,44 @@
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Prohlížeč fotografií">
-  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Zavřít">✕</button>
-  <button class="lightbox-prev" onclick="lightboxNav(-1)" aria-label="Předchozí">‹</button>
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Zavřít prohlížeč fotografií">✕</button>
+  <button class="lightbox-prev" onclick="lightboxNav(-1)" aria-label="Předchozí fotografie">‹</button>
   <img id="lightbox-img" src="" alt="">
-  <button class="lightbox-next" onclick="lightboxNav(1)" aria-label="Další">›</button>
+  <button class="lightbox-next" onclick="lightboxNav(1)" aria-label="Další fotografie">›</button>
 </div>
 
 <!-- SLUŽBY -->
-<section class="services-section" id="sluzby">
+<section class="services-section" id="sluzby" aria-labelledby="sluzby-heading">
   <div class="container">
     <div class="reveal" style="margin-bottom:50px;">
       <div class="section-tag">Co fotografuji</div>
-      <div class="section-title">Nabídka<br><em>služeb</em></div>
+      <h2 class="section-title" id="sluzby-heading">Nabídka<br><em>služeb</em></h2>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
-        <img src="images/foto-sluzby-svatby.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Svatební fotograf Olomoucký kraj">
-        <div class="service-overlay"></div>
+        <img src="images/foto-sluzby-svatby.webp" sizes="(max-width: 900px) 100vw, 33vw" width="400" height="533" alt="Svatební fotograf Olomoucký kraj — přirozené snímky svatebního dne" loading="lazy" decoding="async">
+        <div class="service-overlay" aria-hidden="true"></div>
         <div class="service-info">
-          <div class="service-num">01</div>
+          <div class="service-num" aria-hidden="true">01</div>
           <div class="service-name">Svatby</div>
           <div class="service-sub">Nejkrásnější den vašeho života</div>
         </div>
       </div>
       <div class="service-card reveal">
-        <img src="images/foto-sluzby-rodina.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Rodinné focení těhotenské zvířata">
-        <div class="service-overlay"></div>
+        <img src="images/foto-sluzby-rodina.webp" sizes="(max-width: 900px) 100vw, 33vw" width="400" height="533" alt="Rodinné focení, těhotenské focení a focení zvířat — Olomouc a okolí" loading="lazy" decoding="async">
+        <div class="service-overlay" aria-hidden="true"></div>
         <div class="service-info">
-          <div class="service-num">02</div>
-          <div class="service-name">Rodina<br>& Těhotenské</div>
+          <div class="service-num" aria-hidden="true">02</div>
+          <div class="service-name">Rodina<br>&amp; Těhotenské</div>
           <div class="service-sub">Děti, mazlíčci, budoucí maminky</div>
         </div>
       </div>
       <div class="service-card reveal">
-        <img src="images/foto-sluzby-vanoce.webp" sizes="(max-width: 900px) 100vw, 33vw" alt="Vánoční a tematické focení ateliér">
-        <div class="service-overlay"></div>
+        <img src="images/foto-sluzby-vanoce.webp" sizes="(max-width: 900px) 100vw, 33vw" width="400" height="533" alt="Vánoční focení a ateliérové portréty v Unčovicích u Olomouce" loading="lazy" decoding="async">
+        <div class="service-overlay" aria-hidden="true"></div>
         <div class="service-info">
-          <div class="service-num">03</div>
-          <div class="service-name">Portréty<br>& Ateliér</div>
+          <div class="service-num" aria-hidden="true">03</div>
+          <div class="service-name">Portréty<br>&amp; Ateliér</div>
           <div class="service-sub">Vánoce, tematické projekty</div>
         </div>
       </div>
@@ -675,51 +795,50 @@
 </section>
 
 <!-- CENÍK -->
-<section class="pricing-section" id="cenik">
+<section class="pricing-section" id="cenik" aria-labelledby="cenik-heading">
   <div class="container">
     <div class="reveal">
       <div class="section-tag">Ceník</div>
-      <div class="section-title">Transparentní<br><em>ceny focení</em></div>
+      <h2 class="section-title" id="cenik-heading">Transparentní<br><em>ceny focení</em></h2>
     </div>
     <div class="pricing-grid">
       <div class="price-card reveal">
-        <div class="price-card-tag">Sezónní & vánoční</div>
+        <div class="price-card-tag">Sezónní &amp; vánoční</div>
         <h3>Vánoční focení</h3>
-        <p>Ideální pro vánoční, zimní a podzimní portréty v ateliéru nebo přírodě.</p>
+        <p>Ideální pro vánoční, zimní a podzimní portréty v ateliéru nebo přírodě v Olomouckém kraji.</p>
         <div class="price-amount">Od 500 <span>Kč</span></div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>30 minut focení</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>15+ upravených snímků</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ateliér</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dodání do 1 týdne</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>30 minut focení</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>15+ upravených snímků</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Ateliér Unčovice u Olomouce</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dodání do 1 týdne</li>
         </ul>
       </div>
       <div class="price-card featured reveal">
         <div class="price-tag-badge">Nejoblíbenější</div>
-        <div class="price-card-tag">Rodinné & párové</div>
+        <div class="price-card-tag">Rodinné &amp; párové</div>
         <h3>Základní session</h3>
         <p>Focení pro rodiny, páry, těhotné maminky nebo mazlíčky — venku i v ateliéru.</p>
         <div class="price-amount">Od 800 <span>Kč</span></div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>30–60 minut focení</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>30+ upravených snímků</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dodání do 2 týdnů</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>30–60 minut focení</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>30+ upravených snímků</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dodání do 2 týdnů</li>
         </ul>
       </div>
       <div class="price-card reveal">
         <div class="price-card-tag">Svatby</div>
         <h3>Svatební den</h3>
-        <p>Celý váš svatební den nebo jeho část zachycená v přirozených okamžicích.</p>
+        <p>Celý váš svatební den nebo jeho část zachycená v přirozených okamžicích v Olomouckém kraji a okolí.</p>
         <div class="price-amount">Od 4 000 <span>Kč</span></div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Od obřadu i jen části dne</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Možné i focení jen části dne</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>200+ upravených snímků</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dojedu kamkoliv po domluvě</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dodání do 2 týdnů</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Od obřadu i jen části dne</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>200+ upravených snímků</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Výjezdy po celé ČR</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dodání do 2 týdnů</li>
         </ul>
       </div>
     </div>
@@ -728,33 +847,33 @@
 </section>
 
 <!-- PRŮBĚH -->
-<section class="process-section">
+<section class="process-section" aria-labelledby="process-heading">
   <div class="container">
     <div class="reveal" style="text-align:center;">
       <div class="section-tag" style="text-align:center;">Jak to funguje</div>
-      <div class="section-title" style="text-align:center;">Průběh<br><em>naší spolupráce</em></div>
+      <h2 class="section-title" id="process-heading" style="text-align:center;">Průběh<br><em>naší spolupráce</em></h2>
     </div>
     <div class="process-icons-grid">
       <div class="process-icon-item reveal">
-        <div class="process-icon-circle">
+        <div class="process-icon-circle" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         </div>
         <h3>Napíšete mi</h3>
-        <p>Povíme si o vašich přáních a představách. Domluvíme termín, lokaci a vše potřebné.</p>
+        <p>Povíme si o vašich přáních a představách. Domluvíme termín, lokaci v Olomouckém kraji a vše potřebné.</p>
       </div>
       <div class="process-icon-item reveal">
-        <div class="process-icon-circle">
+        <div class="process-icon-circle" aria-hidden="true">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         </div>
         <h3>Setkáme se</h3>
         <p>Přirozené focení bez stresu a pózování. Jen vy, vaše emoce a já se svým Nikonem.</p>
       </div>
       <div class="process-icon-item reveal">
-        <div class="process-icon-circle">
+        <div class="process-icon-circle" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </div>
         <h3>Dostanete fotky</h3>
-        <p>Všechny upravené snímky bez omezení počtu — rychle, abyste si vzpomínky mohli užít skoro hned.</p>
+        <p>Všechny upravené snímky bez omezení počtu — do 1–2 týdnů, abyste si vzpomínky mohli užít skoro hned.</p>
       </div>
     </div>
   </div>
@@ -762,76 +881,108 @@
 
 <!-- KONTAKT -->
 <div class="container">
-  <section class="contact-section" id="kontakt">
+  <section class="contact-section" id="kontakt" aria-labelledby="kontakt-heading">
     <div class="contact-img reveal-left">
-      <img src="images/foto-kontakt.webp" sizes="(max-width: 900px) 100vw, 50vw" alt="Fotografka Nikola Hubáčková" loading="lazy" decoding="async">
+      <img src="images/foto-kontakt.webp" sizes="(max-width: 900px) 100vw, 50vw" width="600" height="750" alt="Fotografka Nikola Hubáčková — kontakt, ateliér Unčovice u Olomouce" loading="lazy" decoding="async">
     </div>
     <div class="contact-form-wrap reveal">
       <div class="section-tag">Kontakt</div>
-      <h2>Napište mi<br>a <em>domluvíme se</em></h2>
+      <h2 id="kontakt-heading">Napište mi<br>a <em>domluvíme se</em></h2>
       <p>Ráda si o vašem focení popovídám. Odpovídám do 24 hodin.</p>
-      <form id="contact-form">
+      <!-- FORMULÁŘ: přidány viditelné labely pro screen-readery (vizuálně skryté) -->
+      <form id="contact-form" novalidate>
         <input type="hidden" name="access_key" value="TADY_VLOZ_WEB3FORMS_KEY">
         <input type="hidden" name="subject" value="Nová poptávka — hubackovafoto.cz">
         <div class="form-row">
-          <div class="form-group"><input type="text" name="jmeno" placeholder="Vaše jméno" required></div>
-          <div class="form-group"><input type="email" name="email" placeholder="E-mail" required></div>
+          <div class="form-group">
+            <label for="jmeno">Vaše jméno</label>
+            <input type="text" id="jmeno" name="jmeno" placeholder="Vaše jméno" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="E-mail" required autocomplete="email">
+          </div>
         </div>
-        <div class="form-group"><input type="tel" name="telefon" placeholder="Telefon"></div>
-        <div class="form-group"><textarea name="zprava" rows="4" placeholder="Co byste chtěli nafotit?" required></textarea></div>
+        <div class="form-group">
+          <label for="telefon">Telefon (nepovinné)</label>
+          <input type="tel" id="telefon" name="telefon" placeholder="Telefon" autocomplete="tel">
+        </div>
+        <div class="form-group">
+          <label for="zprava">Zpráva</label>
+          <textarea id="zprava" name="zprava" rows="4" placeholder="Co byste chtěli nafotit?" required></textarea>
+        </div>
         <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
           Odeslat zprávu
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
       </form>
       <div class="contact-info">
-        <a href="tel:+420739486263" class="contact-info-item">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a href="tel:+420739486263" class="contact-info-item" aria-label="Zavolejte na +420 739 486 263">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           +420 739 486 263
         </a>
-        <a href="mailto:nikola@hubackovafoto.cz" class="contact-info-item">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          nikola@hubackovafoto.cz
+        <!-- E-MAIL: obfuskace přes JS, viz script níže -->
+        <a href="#" class="contact-info-item" id="email-link" aria-label="Napište e-mail fotografce Nikole Hubáčkové">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span id="email-text">nikola&#64;hubackovafoto&#46;cz</span>
         </a>
-        <a href="https://www.instagram.com/hubackova.photo/" target="_blank" rel="noopener" class="contact-info-item">
-          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        <a href="https://www.instagram.com/hubackova.photo/" target="_blank" rel="noopener noreferrer" class="contact-info-item" aria-label="Sledujte Nikolu Hubáčkovou na Instagramu @hubackova.photo (otevře se v novém okně)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
           @hubackova.photo
         </a>
       </div>
     </div>
   </section>
+
+  <!-- MAPA — GEO signál pro Google -->
+  <section class="map-section" aria-label="Poloha ateliéru Nikoly Hubáčkové — Unčovice u Olomouce">
+    <div class="section-tag" style="margin-bottom:12px;">Kde mě najdete</div>
+    <iframe
+      class="map-embed"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2579.4!2d17.0731!3d49.7089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDQyJzMyLjAiTiAxN8KwMDQnMjMuMiJF!5e0!3m2!1scs!2scz!4v1"
+      width="100%" height="260"
+      style="border:1px solid var(--sand); filter: saturate(0.6) brightness(1.02);"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Mapa — ateliér Nikoly Hubáčkové, Unčovice 69, 784 01 u Olomouce">
+    </iframe>
+    <p style="font-size:13px; color:var(--text-dim); margin-top:10px;">
+      <strong>Ateliér:</strong> Unčovice 69, 784 01 Litovel (u Olomouce) &nbsp;·&nbsp; Výjezdy po celém Olomouckém kraji i ČR
+    </p>
+  </section>
 </div>
 
 <!-- FAQ -->
-<section style="padding: 80px 0; background: var(--cream);">
+<section style="padding: 80px 0; background: var(--cream);" aria-labelledby="faq-heading">
   <div class="container">
     <div class="reveal" style="max-width: 700px; margin: 0 auto;">
       <div class="section-tag" style="text-align:center;">Časté otázky</div>
-      <div class="section-title" style="text-align:center; margin-bottom:50px;">Na co se<br><em>ptáte nejčastěji</em></div>
+      <h2 id="faq-heading" class="section-title" style="text-align:center; margin-bottom:50px;">Na co se<br><em>ptáte nejčastěji</em></h2>
       <div itemscope itemtype="https://schema.org/FAQPage">
         <details style="border-bottom: 1px solid var(--sand); padding: 20px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Kde fotografujete? <span style="color:var(--forest); font-size:22px; font-weight:300;">+</span></summary>
-          <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Fotím v Olomouckém kraji a okolí. Mám vlastní malý ateliér v Unčovicích u Olomouce. Na přání vyjedu kamkoliv po celé České republice.</span></div>
+          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Kde fotografujete? <span style="color:var(--forest); font-size:22px; font-weight:300;" aria-hidden="true">+</span></summary>
+          <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Fotografuji v Olomouckém kraji a okolí — Olomouc, Litovel, Prostějov, Přerov, Šumperk a okolní obce. Mám vlastní malý ateliér v Unčovicích u Olomouce (Unčovice 69, 784 01). Na přání vyjedu kamkoliv po celé České republice.</span></div>
         </details>
         <details style="border-bottom: 1px solid var(--sand); padding: 20px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Jak rychle dostanu fotky? <span style="color:var(--forest); font-size:22px; font-weight:300;">+</span></summary>
-          <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Upravené snímky dostanete do 1–2 týdnů od focení. Snažím se dodat co nejdříve, aby vzpomínky byly čerstvé.</span></div>
+          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Jak rychle dostanu fotky? <span style="color:var(--forest); font-size:22px; font-weight:300;" aria-hidden="true">+</span></summary>
+          <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Upravené snímky dostanete do 1–2 týdnů od focení. U sezónního focení dodání do 1 týdne. Snažím se dodat co nejdříve, aby vzpomínky byly čerstvé.</span></div>
         </details>
         <details style="border-bottom: 1px solid var(--sand); padding: 20px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Kolik snímků dostanu? <span style="color:var(--forest); font-size:22px; font-weight:300;">+</span></summary>
-          <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Počet snímků není omezen. U rodinného focení dostanete minimálně 30 upravených fotografií, u svateb 200 a více.</span></div>
+          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Kolik snímků dostanu? <span style="color:var(--forest); font-size:22px; font-weight:300;" aria-hidden="true">+</span></summary>
+          <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Počet snímků není omezen. U rodinného focení dostanete minimálně 30 upravených fotografií, u svateb 200 a více, u sezónního focení minimálně 15 snímků.</span></div>
         </details>
         <details style="border-bottom: 1px solid var(--sand); padding: 20px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Kolik stojí focení? <span style="color:var(--forest); font-size:22px; font-weight:300;">+</span></summary>
+          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Kolik stojí focení v Olomouci? <span style="color:var(--forest); font-size:22px; font-weight:300;" aria-hidden="true">+</span></summary>
           <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ceny začínají od 500 Kč za vánoční a sezónní focení, od 800 Kč za rodinné nebo párové focení a od 4 000 Kč za svatební fotografie. Ceny jsou orientační a připravím vám nabídku na míru.</span></div>
         </details>
         <details style="border-bottom: 1px solid var(--sand); padding: 20px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Fotíte i venku? <span style="color:var(--forest); font-size:22px; font-weight:300;">+</span></summary>
-          <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ano, fotím venku i v ateliéru. Venkovní focení v přírodě nebo ve městě je velmi oblíbené — výsledky jsou přirozené a plné emocí.</span></div>
+          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Fotíte i venku v přírodě? <span style="color:var(--forest); font-size:22px; font-weight:300;" aria-hidden="true">+</span></summary>
+          <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ano, fotografuji venku i v ateliéru v Unčovicích u Olomouce. Venkovní focení v přírodě nebo ve městě je velmi oblíbené — výsledky jsou přirozené a plné emocí.</span></div>
         </details>
         <details style="padding: 20px 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Fotíte svatby? <span style="color:var(--forest); font-size:22px; font-weight:300;">+</span></summary>
-          <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ano, svatební fotografie jsou jednou z mých specialit. Mohu nafotit celý svatební den nebo jen jeho část — obřad, hostinu nebo portrétní focení páru. Vyjedu po celé ČR.</span></div>
+          <summary style="font-size:17px; font-weight:400; color:var(--dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;" itemprop="name">Fotografujete svatby v Olomouckém kraji? <span style="color:var(--forest); font-size:22px; font-weight:300;" aria-hidden="true">+</span></summary>
+          <div style="padding-top:14px; font-size:15px; color:var(--text-dim); line-height:1.8;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ano, svatební fotografie jsou jednou z mých specialit. Mohu nafotit celý svatební den nebo jen jeho část — obřad, hostinu nebo portrétní focení páru. Vyjíždím po celé ČR, základna je v Olomouckém kraji.</span></div>
         </details>
       </div>
     </div>
@@ -843,8 +994,8 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <a href="#" class="footer-logo">
-        <svg width="32" height="32" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+      <a href="#" class="footer-logo" aria-label="Nikola Hubáčková — Fotografka, zpět na začátek">
+        <svg width="32" height="32" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;" aria-hidden="true">
           <circle cx="19" cy="19" r="17" stroke="#8db88d" stroke-width="1.2" fill="none"/>
           <circle cx="19" cy="19" r="11" stroke="#8db88d" stroke-width="1" fill="none" opacity="0.5"/>
           <g transform="translate(19,19)">
@@ -859,10 +1010,10 @@
         </svg>
         <span style="display:flex; flex-direction:column; line-height:1.2;">
           <span style="font-size:18px;">Nikola <em>Hubáčková</em></span>
-          <span style="font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:rgba(250,248,244,0.45); font-family:'Jost',sans-serif; font-weight:400;">Fotografka</span>
+          <span style="font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:rgba(250,248,244,0.45); font-family:'Jost',sans-serif; font-weight:400;">Fotografka · Olomoucký kraj</span>
         </span>
       </a>
-      <ul class="footer-links">
+      <ul class="footer-links" role="list">
         <li><a href="#o-mne">O mně</a></li>
         <li><a href="#galerie">Galerie</a></li>
         <li><a href="#sluzby">Služby</a></li>
@@ -871,15 +1022,24 @@
       </ul>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Nikola Hubáčková · Unčovice 69, 784 01 Litovel · <a href="mailto:nikola@hubackovafoto.cz">nikola@hubackovafoto.cz</a></span>
-      <span>Web: <a href="https://janyskovadigital.cz">Janyskova Digital</a></span>
+      <span>© 2026 Nikola Hubáčková · Unčovice 69, 784 01 Litovel · <a href="#" id="footer-email-link" aria-label="Napište e-mail Nikole Hubáčkové"><span id="footer-email-text">nikola&#64;hubackovafoto&#46;cz</span></a></span>
+      <span>Web: <a href="https://janyskovadigital.cz" rel="noopener noreferrer">Janyskova Digital</a></span>
     </div>
   </div>
 </footer>
 
+<!-- Plovoucí tlačítka -->
+<div style="position:fixed; bottom:24px; right:24px; display:flex; flex-direction:column; gap:12px; z-index:999;" role="complementary" aria-label="Rychlý kontakt">
+  <a href="https://www.instagram.com/hubackova.photo/" target="_blank" rel="noopener noreferrer" aria-label="Sledujte fotografku Nikolu Hubáčkovou na Instagramu (otevře se v novém okně)" style="width:52px; height:52px; border-radius:50%; background:linear-gradient(135deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,0.2); transition:transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.28)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)'">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none"/></svg>
+  </a>
+  <a href="https://wa.me/420739486263" target="_blank" rel="noopener noreferrer" aria-label="Napište fotografce Nikole Hubáčkové přes WhatsApp na číslo +420 739 486 263 (otevře se v novém okně)" style="width:52px; height:52px; border-radius:50%; background:#25d366; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,0.2); transition:transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.28)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)'">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
 
 <script>
-  // HAMBURGER MENU
+  // HAMBURGER MENU + aria-expanded
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
 
@@ -889,14 +1049,18 @@
   });
 
   hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
     hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    hamburger.setAttribute('aria-expanded', isOpen);
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
   function closeMenu() {
     hamburger.classList.remove('open');
     mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
 
@@ -904,7 +1068,6 @@
   const navbar = document.getElementById('navbar');
   const sections = ['o-mne','galerie','sluzby','cenik','kontakt'];
 
-  // SCROLLSPY
   const navLinks = Array.from(document.querySelectorAll('.nav-links a[data-section]'));
   const spyObs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -916,7 +1079,6 @@
   }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
   sections.forEach(id => { const el = document.getElementById(id); if (el) spyObs.observe(el); });
 
-  // NAV SCROLL
   let scrollTicking = false;
   window.addEventListener('scroll', () => {
     if (!scrollTicking) {
@@ -928,7 +1090,7 @@
     }
   });
 
-  // SLIDESHOW — posun řeší čistě CSS, JS jen nastavuje --slide-index
+  // SLIDESHOW
   const track = document.getElementById('slideshow-track');
   const slides = track.querySelectorAll('.slide');
   const dotsContainer = document.getElementById('slide-dots');
@@ -943,7 +1105,10 @@
     const max = getMaxSlide();
     currentSlide = Math.max(0, Math.min(n, max));
     track.style.setProperty('--slide-index', currentSlide);
-    slideDots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+    slideDots.forEach((d, i) => {
+      d.classList.toggle('active', i === currentSlide);
+      d.setAttribute('aria-selected', i === currentSlide);
+    });
   }
 
   function startInterval() {
@@ -956,12 +1121,21 @@
       const dot = document.createElement('button');
       dot.className = 'slide-dot' + (i === 0 ? ' active' : '');
       dot.setAttribute('aria-label', 'Přejít na fotografii ' + (i + 1));
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
       dot.onclick = () => goToSlide(i);
       dotsContainer.appendChild(dot);
     }
     slideDots = Array.from(dotsContainer.querySelectorAll('.slide-dot'));
     startInterval();
   }
+
+  // Slide klávesnicí (přístupnost)
+  document.querySelectorAll('.slide').forEach((slide, i) => {
+    slide.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(i); }
+    });
+  });
 
   document.getElementById('slide-prev').onclick = () => { clearInterval(slideInterval); goToSlide(currentSlide - 1); startInterval(); };
   document.getElementById('slide-next').onclick = () => { clearInterval(slideInterval); goToSlide(currentSlide + 1); startInterval(); };
@@ -973,23 +1147,26 @@
   }
 
   // LIGHTBOX
-  const lightboxImgs = [
-    'images/foto-01.webp',
-    'images/foto-02.webp',
-    'images/foto-03.webp',
-    'images/foto-04.webp',
-    'images/foto-05.webp',
-    'images/foto-06.webp',
-    'images/foto-07.webp',
-    'images/foto-08.webp'
+  const lightboxData = [
+    { src: 'images/foto-01.webp', alt: 'Svatební fotografie — nevěsta se závojem, Olomoucký kraj' },
+    { src: 'images/foto-02.webp', alt: 'Párové focení v přírodě — přirozené objetí' },
+    { src: 'images/foto-03.webp', alt: 'Dětské focení — novorozenec v ateliéru Unčovice' },
+    { src: 'images/foto-04.webp', alt: 'Těhotenské focení — maminka čekající miminko' },
+    { src: 'images/foto-05.webp', alt: 'Svatební detail — ozdobný dort' },
+    { src: 'images/foto-06.webp', alt: 'Focení zvířat — portrét psa venku' },
+    { src: 'images/foto-07.webp', alt: 'Rodinné focení na mostě' },
+    { src: 'images/foto-08.webp', alt: 'Svatební fotografie při zlaté hodině' }
   ];
   let currentLightbox = 0;
 
   function openLightbox(i) {
     currentLightbox = i;
-    document.getElementById('lightbox-img').src = lightboxImgs[i];
+    const img = document.getElementById('lightbox-img');
+    img.src = lightboxData[i].src;
+    img.alt = lightboxData[i].alt;
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
+    document.querySelector('.lightbox-close').focus();
   }
 
   function closeLightbox() {
@@ -998,8 +1175,10 @@
   }
 
   function lightboxNav(dir) {
-    currentLightbox = (currentLightbox + dir + lightboxImgs.length) % lightboxImgs.length;
-    document.getElementById('lightbox-img').src = lightboxImgs[currentLightbox];
+    currentLightbox = (currentLightbox + dir + lightboxData.length) % lightboxData.length;
+    const img = document.getElementById('lightbox-img');
+    img.src = lightboxData[currentLightbox].src;
+    img.alt = lightboxData[currentLightbox].alt;
   }
 
   document.getElementById('lightbox').addEventListener('click', e => {
@@ -1016,35 +1195,50 @@
   const form = document.getElementById('contact-form');
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    const btn = form.querySelector('button');
+    const btn = form.querySelector('button[type="submit"]');
     const orig = btn.innerHTML;
     btn.innerHTML = 'Odesílám...';
     btn.disabled = true;
+    btn.setAttribute('aria-busy', 'true');
     try {
       const formData = new FormData(form);
       const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: json
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(object)
       });
       const data = await res.json();
       if (data.success) {
         btn.innerHTML = '✓ Zpráva odeslána!';
+        btn.setAttribute('aria-live', 'polite');
         form.reset();
-        setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 4000);
+        setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; btn.removeAttribute('aria-busy'); }, 4000);
       } else {
         throw new Error(data.message);
       }
     } catch {
       btn.innerHTML = orig;
       btn.disabled = false;
+      btn.removeAttribute('aria-busy');
     }
   });
+
+  // E-MAIL OBFUSKACE — ochrana před spam roboty
+  (function() {
+    const u = 'nikola';
+    const d = 'hubackovafoto.cz';
+    const addr = u + '@' + d;
+    const el = document.getElementById('email-link');
+    if (el) {
+      el.href = 'mailto:' + addr;
+      el.setAttribute('aria-label', 'Napište e-mail: ' + addr);
+    }
+    const el2 = document.getElementById('footer-email-link');
+    if (el2) {
+      el2.href = 'mailto:' + addr;
+    }
+  })();
 
   // REVEAL
   const revObs = new IntersectionObserver(entries => {
@@ -1052,16 +1246,6 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal, .reveal-left').forEach(el => revObs.observe(el));
 </script>
-
-<!-- Plovoucí tlačítka -->
-<div style="position:fixed; bottom:24px; right:24px; display:flex; flex-direction:column; gap:12px; z-index:999;">
-  <a href="https://www.instagram.com/hubackova.photo/" target="_blank" rel="noopener" aria-label="Instagram Nikoly Hubáčkové" style="width:52px; height:52px; border-radius:50%; background:linear-gradient(135deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,0.2); transition:transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.28)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)'">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none"/></svg>
-  </a>
-  <a href="https://wa.me/420739486263" target="_blank" rel="noopener" aria-label="WhatsApp Nikoly Hubáčkové" style="width:52px; height:52px; border-radius:50%; background:#25d366; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,0.2); transition:transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.28)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)'">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-</div>
 
 </body>
 </html>
